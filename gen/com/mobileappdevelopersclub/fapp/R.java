@@ -37,24 +37,27 @@ public final class R {
     }
     public static final class id {
         public static final int Title=0x7f090000;
-        public static final int action_add_class=0x7f090015;
+        public static final int action_add_class=0x7f090018;
         public static final int btnChangeDate=0x7f090003;
-        public static final int classBuilding=0x7f090011;
-        public static final int classDate=0x7f090010;
-        public static final int className=0x7f09000f;
-        public static final int classes=0x7f09000e;
-        public static final int daysOfWeek=0x7f090013;
+        public static final int classBuilding=0x7f090014;
+        public static final int classDate=0x7f090013;
+        public static final int className=0x7f090012;
+        public static final int classes=0x7f090011;
+        public static final int daysOfWeek=0x7f090016;
         public static final int dpResult=0x7f090006;
         public static final int drawer_layout=0x7f090007;
+        public static final int foodList=0x7f09000f;
         public static final int icon=0x7f09000a;
         public static final int lblDate=0x7f090004;
         public static final int left_drawer=0x7f090009;
         public static final int main_frame=0x7f090008;
         public static final int password=0x7f090002;
-        public static final int schedule=0x7f090014;
-        public static final int scheduleLayout=0x7f090012;
+        public static final int resterauntName=0x7f09000d;
+        public static final int resterauntSpecial=0x7f09000e;
+        public static final int schedule=0x7f090017;
+        public static final int scheduleLayout=0x7f090015;
         public static final int subtitle=0x7f09000c;
-        public static final int timeSlots=0x7f09000d;
+        public static final int timeSlots=0x7f090010;
         public static final int title=0x7f09000b;
         public static final int tvDate=0x7f090005;
         public static final int username=0x7f090001;
@@ -65,10 +68,12 @@ public final class R {
         public static final int date_picker=0x7f030002;
         public static final int drawer_layout_main=0x7f030003;
         public static final int drawer_list_item=0x7f030004;
-        public static final int main=0x7f030005;
-        public static final int schedule_layout=0x7f030006;
-        public static final int schedule_list_item=0x7f030007;
-        public static final int schedulefragment_main=0x7f030008;
+        public static final int food_list_item=0x7f030005;
+        public static final int food_list_layout=0x7f030006;
+        public static final int main=0x7f030007;
+        public static final int schedule_layout=0x7f030008;
+        public static final int schedule_list_item=0x7f030009;
+        public static final int schedulefragment_main=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f080000;

@@ -1,23 +1,19 @@
 package com.mobileappdevelopersclub.fapp;
 
-import com.couchbase.cblite.router.CBLURLStreamHandlerFactory;
-import com.mobileappdevelopersclub.fapp.adapters.MenuListAdapter;
-import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
-
-import android.os.Build;
-import android.os.Bundle;
-import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.res.Configuration;
+import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.couchbase.cblite.router.CBLURLStreamHandlerFactory;
+import com.mobileappdevelopersclub.fapp.adapters.MenuListAdapter;
+import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
+import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
 
 public class MainActivity extends FappActivity {
 
@@ -32,11 +28,16 @@ public class MainActivity extends FappActivity {
 	public static ListView mDrawerList;
 	public static DrawerLayout mDrawerLayout;
 	static MenuListAdapter mMenuAdapter;
+	
+	//Option Fragments to Navigate to through drawer 
+	ScheduleFragment mScheduleFragment;
+	FoodSpecialsFragment mFoodSpecialsFragment;
+	
 
 	{
-	    CBLURLStreamHandlerFactory.registerSelfIgnoreError();
+		CBLURLStreamHandlerFactory.registerSelfIgnoreError();
 	}
-	
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class MainActivity extends FappActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.drawer_layout_main);
 		Constants.initConstants(this);
-		
+
 		mTitle = mDrawerTitle = "Fapp";
 		getActionBar().setTitle(mTitle);
 
@@ -72,7 +73,7 @@ public class MainActivity extends FappActivity {
 
 
 		getActionBar().setDisplayHomeAsUpEnabled(true);
-//		getActionBar().setHomeButtonEnabled(true);
+		//		getActionBar().setHomeButtonEnabled(true);
 
 		// ActionBarDrawerToggle ties together the the proper interactions
 		// between the sliding drawer and the action bar app icon
@@ -100,9 +101,9 @@ public class MainActivity extends FappActivity {
 
 		if (savedInstanceState == null) {
 			//
-			ScheduleFragment fragment = ScheduleFragment.newInstance();
-			getFragmentManager().beginTransaction().replace(R.id.main_frame, fragment).commit();
-//			mDrawerList.setItemChecked(Constants.FRAT_DRAWER_POSITION, true);
+			mScheduleFragment = ScheduleFragment.newInstance();
+			getFragmentManager().beginTransaction().replace(R.id.main_frame, mScheduleFragment).commit();
+			//			mDrawerList.setItemChecked(Constants.FRAT_DRAWER_POSITION, true);
 		}
 
 	}
@@ -118,23 +119,24 @@ public class MainActivity extends FappActivity {
 	private void selectItem(int position) {
 
 
-		//		// update the main content by replacing fragments
-		//		if(position == Constants.FRAT_DRAWER_POSITION) {
-		//
-		//
-		//		} else if(position == Constants.SORO_DRAWER_POSITION) {
-		//
-		//
-		//
-		//
-		//		} else if(position == Constants.COED_DRAWER_POSITION) {
-		//
-		//
-		//
-		//		} else {
-		//			//do nothing
-		//			Globals.mDrawerList.setItemChecked(position, false);
-		//		}
+		// update the main content by replacing fragments
+		if(position == Constants.SCHEDULE_OPTION) {
+
+			mScheduleFragment = ScheduleFragment.newInstance();
+			getFragmentManager().beginTransaction().replace(R.id.main_frame, mScheduleFragment).commit();
+			mDrawerList.setItemChecked(position, false);
+			mDrawerLayout.closeDrawer(mDrawerList);
+		} else if(position == Constants.FOOD_OPTION) {
+
+			mFoodSpecialsFragment = FoodSpecialsFragment.newInstance();
+			getFragmentManager().beginTransaction().replace(R.id.main_frame, mFoodSpecialsFragment).commit();
+			mDrawerList.setItemChecked(position, false);
+			mDrawerLayout.closeDrawer(mDrawerList);
+		} else {
+			//do nothing
+			mDrawerList.setItemChecked(position, false);
+			mDrawerLayout.closeDrawer(mDrawerList);
+		}
 
 	}
 

@@ -4,7 +4,7 @@ import android.content.Context;
 
 
 public class Constants {
-
+	
 	public static final String MONDAY = "Monday";
 	public static final String TUESDAY = "Tuesday";
 	public static final String WEDNESDAY = "Wednesday";
@@ -24,6 +24,9 @@ public class Constants {
 	public static int pixelsPerFifteenMin;
 	private static final float DPS = 16.0f;  // Constant for calculating dp programaticaly 
 	
+	//NavigationDrawer Option Constants 
+	public static final int SCHEDULE_OPTION = 0;
+	public static final int FOOD_OPTION = 1;
 	
 	
 	public static void initConstants(Context context) {
