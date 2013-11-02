@@ -27,7 +27,11 @@ public class Constants {
 	//NavigationDrawer Option Constants 
 	public static final int SCHEDULE_OPTION = 0;
 	public static final int FOOD_OPTION = 1;
+	public static final int LIBRARY_OPTION = 3;
 	
+	//hardcoded image urls 
+	public static final String PIZZA_KINGDOM = "http://media-cdn.tripadvisor.com/media/photo-s/03/37/fc/fa/pizza-kingdom.jpg";
+	public static final String BAGEL_PLACE = "http://mw2.google.com/mw-panoramio/photos/medium/51118223.jpg";
 	
 	public static void initConstants(Context context) {
 		final float scale = context.getResources().getDimension(R.dimen.one_hour_increment);

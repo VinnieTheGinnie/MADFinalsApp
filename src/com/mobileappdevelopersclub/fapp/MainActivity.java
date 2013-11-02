@@ -13,6 +13,7 @@ import android.widget.ListView;
 import com.couchbase.cblite.router.CBLURLStreamHandlerFactory;
 import com.mobileappdevelopersclub.fapp.adapters.MenuListAdapter;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
+import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
 
 public class MainActivity extends FappActivity {
@@ -32,6 +33,7 @@ public class MainActivity extends FappActivity {
 	//Option Fragments to Navigate to through drawer 
 	ScheduleFragment mScheduleFragment;
 	FoodSpecialsFragment mFoodSpecialsFragment;
+	LibraryListFragment mLibraryListFragment;
 	
 
 	{
@@ -132,6 +134,13 @@ public class MainActivity extends FappActivity {
 			getFragmentManager().beginTransaction().replace(R.id.main_frame, mFoodSpecialsFragment).commit();
 			mDrawerList.setItemChecked(position, false);
 			mDrawerLayout.closeDrawer(mDrawerList);
+		} else if (position == Constants.LIBRARY_OPTION ){
+
+			mLibraryListFragment = LibraryListFragment.newInstance();
+			getFragmentManager().beginTransaction().replace(R.id.main_frame, mLibraryListFragment).commit();
+			mDrawerList.setItemChecked(position, false);
+			mDrawerLayout.closeDrawer(mDrawerList);
+		
 		} else {
 			//do nothing
 			mDrawerList.setItemChecked(position, false);

@@ -34,6 +34,7 @@ import com.couchbase.cblite.ektorp.CBLiteHttpClient;
 import com.mobileappdevelopersclub.fapp.FappApplication;
 import com.mobileappdevelopersclub.fapp.MainActivity;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
+import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
 import com.mobileappdevelopersclub.fapp.util.ForApplication;
 
@@ -45,7 +46,9 @@ import dagger.Provides;
  * {@link android.app.Application} to create.
  */
 @Module(
-		injects= { MainActivity.class, FappApplication.class, ScheduleFragment.class, FoodSpecialsFragment.class } , 
+		injects= { MainActivity.class, FappApplication.class, 
+					ScheduleFragment.class, FoodSpecialsFragment.class,
+					LibraryListFragment.class } , 
 		library = true
 		)
 

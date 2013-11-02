@@ -20,8 +20,9 @@ public class LibraryListItemAdapter extends ArrayAdapter<Library>{
 	private List<Library> mLibraries;
 	
 	
-	@InjectView(R.id.resterauntName) TextView resterauntName;
-	@InjectView(R.id.resterauntSpecial) TextView resterauntSpecial;
+	@InjectView(R.id.libraryName) TextView libraryName;
+	@InjectView(R.id.libraryLocation) TextView libraryLocation;
+	@InjectView(R.id.libraryHours) TextView libraryHours;
 	
 	public LibraryListItemAdapter(Context context, int resource, List<Library> objects) {
 		super(context, resource, objects);
@@ -42,7 +43,7 @@ public class LibraryListItemAdapter extends ArrayAdapter<Library>{
 		
 	
 		if(convertView == null) {
-			convertView = View.inflate(context, R.layout.food_list_item, null);
+			convertView = View.inflate(context, R.layout.library_list_item, null);
 		} else {
 			convertView.getTag();
 		}
@@ -50,6 +51,13 @@ public class LibraryListItemAdapter extends ArrayAdapter<Library>{
 		//Inject views (See android butterknife)
 		Views.inject(this, convertView);
 		
+		Library currLib = mLibraries.get(position);
+		
+		libraryName.setText(currLib.getName());
+		libraryLocation.setText(currLib.getLocation());
+		
+		String formattedLibHours = currLib.getHourOpen() + " - " + currLib.getHourClose();
+		libraryHours.setText(formattedLibHours);
 		
 		return convertView;
 	}
