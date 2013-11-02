@@ -1,0 +1,7 @@
+<factorypath>
+    <factorypathentry kind="WKSPJAR" id="/Fapp/libs/dagger-1.1.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="WKSPJAR" id="/Fapp/libs/dagger-compiler-1.1.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="WKSPJAR" id="/Fapp/libs/javawriter-2.2.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="WKSPJAR" id="/Fapp/libs/javax.inject-1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="WKSPJAR" id="/Fapp/libs/butterknife-3.0.0.jar" enabled="true" runInBatchMode="false"/>
+</factorypath>

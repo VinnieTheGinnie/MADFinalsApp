@@ -6,20 +6,22 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import butterknife.InjectView;
 import butterknife.Views;
 
+import com.mobileappdevelopersclub.fapp.Constants;
 import com.mobileappdevelopersclub.fapp.R;
-import com.mobileappdevelopersclub.fapp.models.FoodItem;
 import com.mobileappdevelopersclub.fapp.models.Library;
+import com.squareup.picasso.Picasso;
 
 public class LibraryListItemAdapter extends ArrayAdapter<Library>{
 	
 	private Context context;
 	private List<Library> mLibraries;
 	
-	
+	@InjectView(R.id.libraryImage) ImageView libraryImage;
 	@InjectView(R.id.libraryName) TextView libraryName;
 	@InjectView(R.id.libraryLocation) TextView libraryLocation;
 	@InjectView(R.id.libraryHours) TextView libraryHours;
@@ -52,6 +54,9 @@ public class LibraryListItemAdapter extends ArrayAdapter<Library>{
 		Views.inject(this, convertView);
 		
 		Library currLib = mLibraries.get(position);
+		
+		Picasso.with(context).load(Constants.MCKELDIN).into(libraryImage);
+		
 		
 		libraryName.setText(currLib.getName());
 		libraryLocation.setText(currLib.getLocation());
