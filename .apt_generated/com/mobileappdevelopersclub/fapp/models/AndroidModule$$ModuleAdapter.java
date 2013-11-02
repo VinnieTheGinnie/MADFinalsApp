@@ -26,35 +26,8 @@ public final class AndroidModule$$ModuleAdapter extends ModuleAdapter<AndroidMod
    */
   @Override
   public void getBindings(Map<String, Binding<?>> map) {
-    map.put("org.ektorp.CouchDbInstance", new ProvideCouchDbInstanceProvidesAdapter(module));
     map.put("@com.mobileappdevelopersclub.fapp.util.ForApplication()/android.content.Context", new ProvideContextProvidesAdapter(module));
-  }
-
-  /**
-   * A {@code Binder<org.ektorp.CouchDbInstance>} implementation which satisfies
-   * Dagger's infrastructure requirements including:
-   * 
-   * Being a {@code Provider<org.ektorp.CouchDbInstance>} and handling creation and
-   * preparation of object instances.
-   */
-  public static final class ProvideCouchDbInstanceProvidesAdapter extends Binding<org.ektorp.CouchDbInstance>
-      implements Provider<org.ektorp.CouchDbInstance> {
-    private final AndroidModule module;
-
-    public ProvideCouchDbInstanceProvidesAdapter(AndroidModule module) {
-      super("org.ektorp.CouchDbInstance", null, IS_SINGLETON, "com.mobileappdevelopersclub.fapp.models.AndroidModule.provideCouchDbInstance()");
-      this.module = module;
-      setLibrary(true);
-    }
-
-    /**
-     * Returns the fully provisioned instance satisfying the contract for
-     * {@code Provider<org.ektorp.CouchDbInstance>}.
-     */
-    @Override
-    public org.ektorp.CouchDbInstance get() {
-      return module.provideCouchDbInstance();
-    }
+    map.put("org.ektorp.CouchDbInstance", new ProvideCouchDbInstanceProvidesAdapter(module));
   }
 
   /**
@@ -81,6 +54,33 @@ public final class AndroidModule$$ModuleAdapter extends ModuleAdapter<AndroidMod
     @Override
     public android.content.Context get() {
       return module.provideContext();
+    }
+  }
+
+  /**
+   * A {@code Binder<org.ektorp.CouchDbInstance>} implementation which satisfies
+   * Dagger's infrastructure requirements including:
+   * 
+   * Being a {@code Provider<org.ektorp.CouchDbInstance>} and handling creation and
+   * preparation of object instances.
+   */
+  public static final class ProvideCouchDbInstanceProvidesAdapter extends Binding<org.ektorp.CouchDbInstance>
+      implements Provider<org.ektorp.CouchDbInstance> {
+    private final AndroidModule module;
+
+    public ProvideCouchDbInstanceProvidesAdapter(AndroidModule module) {
+      super("org.ektorp.CouchDbInstance", null, IS_SINGLETON, "com.mobileappdevelopersclub.fapp.models.AndroidModule.provideCouchDbInstance()");
+      this.module = module;
+      setLibrary(true);
+    }
+
+    /**
+     * Returns the fully provisioned instance satisfying the contract for
+     * {@code Provider<org.ektorp.CouchDbInstance>}.
+     */
+    @Override
+    public org.ektorp.CouchDbInstance get() {
+      return module.provideCouchDbInstance();
     }
   }
 }

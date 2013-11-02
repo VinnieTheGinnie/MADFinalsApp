@@ -1,5 +1,6 @@
 package com.mobileappdevelopersclub.fapp;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -9,9 +10,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.couchbase.cblite.router.CBLURLStreamHandlerFactory;
 import com.mobileappdevelopersclub.fapp.adapters.MenuListAdapter;
+import com.mobileappdevelopersclub.fapp.transactions.MotivationalMessageService;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
 import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
@@ -47,7 +50,11 @@ public class MainActivity extends FappActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.drawer_layout_main);
 		Constants.initConstants(this);
-
+		
+		Intent intent = new Intent(this, MotivationalMessageService.class);
+		startService(intent);
+		
+		
 		mTitle = mDrawerTitle = "Fapp";
 		getActionBar().setTitle(mTitle);
 
