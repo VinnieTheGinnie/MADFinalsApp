@@ -47,8 +47,8 @@ public class FoodSpecialsFragment extends FappFragment {
 
 		mAdapter = new FoodItemAdapter(getActivity(), 0, new ArrayList<FoodItem>());
 		
-		mView = inflater.inflate(R.layout.food_list_layout, null);	
-		mList = (ListView) mView.findViewById(R.id.foodList);
+		mView = inflater.inflate(R.layout.list_layout, null);	
+		mList = (ListView) mView.findViewById(R.id.mList);
 		mList.setAdapter(mAdapter);
 		
 		

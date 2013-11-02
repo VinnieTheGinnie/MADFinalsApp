@@ -46,10 +46,10 @@ public final class R {
         public static final int daysOfWeek=0x7f090016;
         public static final int dpResult=0x7f090006;
         public static final int drawer_layout=0x7f090007;
-        public static final int foodList=0x7f09000f;
         public static final int icon=0x7f09000a;
         public static final int lblDate=0x7f090004;
         public static final int left_drawer=0x7f090009;
+        public static final int mList=0x7f09000f;
         public static final int main_frame=0x7f090008;
         public static final int password=0x7f090002;
         public static final int resterauntName=0x7f09000d;
@@ -69,11 +69,12 @@ public final class R {
         public static final int drawer_layout_main=0x7f030003;
         public static final int drawer_list_item=0x7f030004;
         public static final int food_list_item=0x7f030005;
-        public static final int food_list_layout=0x7f030006;
-        public static final int main=0x7f030007;
-        public static final int schedule_layout=0x7f030008;
-        public static final int schedule_list_item=0x7f030009;
-        public static final int schedulefragment_main=0x7f03000a;
+        public static final int library_list_item=0x7f030006;
+        public static final int list_layout=0x7f030007;
+        public static final int main=0x7f030008;
+        public static final int schedule_layout=0x7f030009;
+        public static final int schedule_list_item=0x7f03000a;
+        public static final int schedulefragment_main=0x7f03000b;
     }
     public static final class menu {
         public static final int main=0x7f080000;
