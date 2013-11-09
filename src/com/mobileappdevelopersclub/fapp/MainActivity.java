@@ -32,12 +32,12 @@ public class MainActivity extends FappActivity {
 	public static ListView mDrawerList;
 	public static DrawerLayout mDrawerLayout;
 	static MenuListAdapter mMenuAdapter;
-	
+
 	//Option Fragments to Navigate to through drawer 
 	ScheduleFragment mScheduleFragment;
 	FoodSpecialsFragment mFoodSpecialsFragment;
 	LibraryListFragment mLibraryListFragment;
-	
+
 
 	{
 		CBLURLStreamHandlerFactory.registerSelfIgnoreError();
@@ -51,10 +51,11 @@ public class MainActivity extends FappActivity {
 		setContentView(R.layout.drawer_layout_main);
 		Constants.initConstants(this);
 		
-		Intent intent = new Intent(this, MotivationalMessageService.class);
-		startService(intent);
-		
-		
+		//set broadcast receiver
+		// Uncomment this code to set up notifications 
+//		MotivationalMessageService bR = new MotivationalMessageService();
+//		bR.setAlarm(this);
+
 		mTitle = mDrawerTitle = "Fapp";
 		getActionBar().setTitle(mTitle);
 
@@ -147,7 +148,7 @@ public class MainActivity extends FappActivity {
 			getFragmentManager().beginTransaction().replace(R.id.main_frame, mLibraryListFragment).commit();
 			mDrawerList.setItemChecked(position, false);
 			mDrawerLayout.closeDrawer(mDrawerList);
-		
+
 		} else {
 			//do nothing
 			mDrawerList.setItemChecked(position, false);
