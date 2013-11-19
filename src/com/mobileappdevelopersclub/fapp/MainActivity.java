@@ -18,6 +18,7 @@ import com.mobileappdevelopersclub.fapp.transactions.MotivationalMessageService;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
 import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
+import com.mobileappdevelopersclub.fapp.ui.TweetsListFragment;
 
 public class MainActivity extends FappActivity {
 
@@ -28,7 +29,7 @@ public class MainActivity extends FappActivity {
 	private ActionBarDrawerToggle mDrawerToggle;
 
 	public static String[] mDrawerOptions = {"Schedule" , "Food" , "Events" 
-		, "Libraries" , "Transportation", "Extras"};
+		, "Libraries" , "Transportation", "Tweets #UMDfinals", "Extras"};
 	public static ListView mDrawerList;
 	public static DrawerLayout mDrawerLayout;
 	static MenuListAdapter mMenuAdapter;
@@ -37,6 +38,7 @@ public class MainActivity extends FappActivity {
 	ScheduleFragment mScheduleFragment;
 	FoodSpecialsFragment mFoodSpecialsFragment;
 	LibraryListFragment mLibraryListFragment;
+	TweetsListFragment mTweetsListFragment;
 
 
 	{
@@ -148,7 +150,12 @@ public class MainActivity extends FappActivity {
 			getFragmentManager().beginTransaction().replace(R.id.main_frame, mLibraryListFragment).commit();
 			mDrawerList.setItemChecked(position, false);
 			mDrawerLayout.closeDrawer(mDrawerList);
+		} else if (position == Constants.TWEETS_OPTION ){
 
+			mTweetsListFragment = TweetsListFragment.newInstance();
+			getFragmentManager().beginTransaction().replace(R.id.main_frame, mTweetsListFragment).commit();
+			mDrawerList.setItemChecked(position, false);
+			mDrawerLayout.closeDrawer(mDrawerList);
 		} else {
 			//do nothing
 			mDrawerList.setItemChecked(position, false);

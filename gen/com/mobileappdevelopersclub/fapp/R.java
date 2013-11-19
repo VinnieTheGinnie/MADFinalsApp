@@ -22,6 +22,11 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f060000;
         public static final int activity_vertical_margin=0x7f060001;
+        /** 
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw600dp devices (e.g. 7" tablets) here.
+    
+         */
         public static final int one_hour_increment=0x7f060002;
     }
     public static final class drawable {
@@ -37,7 +42,8 @@ public final class R {
     }
     public static final class id {
         public static final int Title=0x7f090000;
-        public static final int action_add_class=0x7f09001d;
+        public static final int TweetImage=0x7f09001e;
+        public static final int action_add_class=0x7f090022;
         public static final int btnChangeDate=0x7f090003;
         public static final int classBuilding=0x7f090019;
         public static final int classDate=0x7f090018;
@@ -65,6 +71,10 @@ public final class R {
         public static final int timeSlots=0x7f090015;
         public static final int title=0x7f09000b;
         public static final int tvDate=0x7f090005;
+        public static final int tweetHashtags=0x7f090021;
+        public static final int tweetImage=0x7f09001d;
+        public static final int tweetText=0x7f090020;
+        public static final int tweetUsername=0x7f09001f;
         public static final int username=0x7f090001;
     }
     public static final class layout {
@@ -80,6 +90,7 @@ public final class R {
         public static final int schedule_layout=0x7f030009;
         public static final int schedule_list_item=0x7f03000a;
         public static final int schedulefragment_main=0x7f03000b;
+        public static final int tweets_list_item=0x7f03000c;
     }
     public static final class menu {
         public static final int main=0x7f080000;

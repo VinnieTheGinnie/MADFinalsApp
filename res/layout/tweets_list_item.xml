@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_background_white"
+    android:orientation="horizontal" >
+    
+    
+    <ImageView
+        android:id="@+id/tweetImage"
+        android:layout_width="0dip"
+        android:layout_weight="0.6"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="@null"
+        android:adjustViewBounds="true" />
+
+    <LinearLayout
+        android:layout_width="0dip"
+        android:layout_weight="0.4"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/TweetImage"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/tweetUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="0dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp" />
+        
+     	<TextView
+            android:id="@+id/tweetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="1dp"
+            android:paddingLeft="10dp"/>
+    
+    	<TextView
+            android:id="@+id/tweetHashtags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="1dp"
+            android:paddingLeft="10dp"/>
+
+    </LinearLayout>
+</LinearLayout>

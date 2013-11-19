@@ -36,6 +36,7 @@ import com.mobileappdevelopersclub.fapp.MainActivity;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
 import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
+import com.mobileappdevelopersclub.fapp.ui.TweetsListFragment;
 import com.mobileappdevelopersclub.fapp.util.ForApplication;
 
 import dagger.Module;
@@ -48,7 +49,7 @@ import dagger.Provides;
 @Module(
 		injects= { MainActivity.class, FappApplication.class, 
 					ScheduleFragment.class, FoodSpecialsFragment.class,
-					LibraryListFragment.class } , 
+					LibraryListFragment.class, TweetsListFragment.class } , 
 		library = true
 		)
 
