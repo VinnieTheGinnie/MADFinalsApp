@@ -1,4 +1,5 @@
 package com.mobileappdevelopersclub.fapp.ui;
+
 import java.util.ArrayList;
 
 import android.content.Context;
@@ -8,21 +9,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.mobileappdevelopersclub.fapp.Constants;
 import com.mobileappdevelopersclub.fapp.FappFragment;
 import com.mobileappdevelopersclub.fapp.R;
-import com.mobileappdevelopersclub.fapp.adapters.LibraryListItemAdapter;
-import com.mobileappdevelopersclub.fapp.models.Library;
+import com.mobileappdevelopersclub.fapp.adapters.TweetsListItemAdapter;
+import com.mobileappdevelopersclub.fapp.models.Tweet;
 
-public class LibraryListFragment extends FappFragment {
+public class TweetsListFragment extends FappFragment {
 	
 	private View mView;
 	private Context context;
 	private ListView mList;
-	private LibraryListItemAdapter mAdapter;
+	private TweetsListItemAdapter mAdapter;
 	
-	public static LibraryListFragment newInstance() {
-		LibraryListFragment fragment = new LibraryListFragment();
+	public static TweetsListFragment newInstance() {
+		TweetsListFragment fragment = new TweetsListFragment();
 		return fragment;
 	}
 
@@ -38,33 +38,39 @@ public class LibraryListFragment extends FappFragment {
 		// TODO Auto-generated method stub
 		super.onCreateView(inflater, container, savedInstanceState);
 		
-		mView = inflater.inflate(R.layout.list_layout , null);
+		mView = inflater.inflate(R.layout.list_layout, null);
 		
-		mAdapter = new LibraryListItemAdapter(getActivity(), 0, new ArrayList<Library>());	
+		mAdapter = new TweetsListItemAdapter(getActivity(), 0, new ArrayList<Tweet>());
 		mList = (ListView) mView.findViewById(R.id.mList);
 		mList.setAdapter(mAdapter);
 		
-		createTestLibraries();
+		createTestTweets();
 		
 		return mView;
 	}
 	
+	/** Test for Tweets list view
+	 **/
 	
-	/**
-	 * Test function to test listView
-	 * 
-	 */
-	
-	
-	private void createTestLibraries() {
+	private void createTestTweets() {
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("#UMDfinals");
+		list.add("#UMDgoTerps");
 		
-		for(int i= 0; i < Constants.UMDLIBS.length; i++) {
-			String currInt =  Integer.toString(i);
-			mAdapter.add(new Library("Library " + currInt, "Location " + currInt, "10:00", "10:00", new ArrayList<String>()));
+		for (int i = 0; i < 20; i++) {
+			String currInt = Integer.toString(i);
+			mAdapter.add(new Tweet("twitter_user_" + currInt, "Wow finals are hard, im hungry #UMDfinals", list) );
+			
 		}
 		
-		mAdapter.notifyDataSetChanged();
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

@@ -1,5 +1,6 @@
 package com.mobileappdevelopersclub.fapp;
 
+
 import android.content.Context;
 
 
@@ -24,10 +25,11 @@ public class Constants {
 	public static int pixelsPerFifteenMin;
 	private static final float DPS = 16.0f;  // Constant for calculating dp programaticaly 
 	
-	//NavigationDrawer Option Constants 
+	//NavigationDrawer Option Constants (positions in array)
 	public static final int SCHEDULE_OPTION = 0;
 	public static final int FOOD_OPTION = 1;
 	public static final int LIBRARY_OPTION = 3;
+	public static final int TWEETS_OPTION = 5;
 	
 	//hardcoded image urls 
 	public static final String PIZZA_KINGDOM = "http://media-cdn.tripadvisor.com/media/photo-s/03/37/fc/fa/pizza-kingdom.jpg";
@@ -46,8 +48,9 @@ public class Constants {
 	
 	
 	public static void initConstants(Context context) {
-		final float scale = context.getResources().getDimension(R.dimen.one_hour_increment);
 		
+		final float scale = context.getResources().getDimension(R.dimen.one_hour_increment);
+		//final float scale = 6;
 		pixelsPerHour = (int) (DPS * scale + 0.5f);
 		pixelsPerTenMin = pixelsPerHour / 6;
 		pixelsPerFifteenMin = pixelsPerHour / 4;
