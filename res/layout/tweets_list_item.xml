@@ -17,9 +17,9 @@
 
     <LinearLayout
         android:layout_width="0dip"
-        android:layout_weight="0.4"
         android:layout_height="match_parent"
         android:layout_toRightOf="@+id/TweetImage"
+        android:layout_weight="0.89"
         android:orientation="vertical" >
         
         <TextView

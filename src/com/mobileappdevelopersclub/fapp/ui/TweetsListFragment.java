@@ -1,12 +1,15 @@
 package com.mobileappdevelopersclub.fapp.ui;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.mobileappdevelopersclub.fapp.FappFragment;
@@ -14,12 +17,17 @@ import com.mobileappdevelopersclub.fapp.R;
 import com.mobileappdevelopersclub.fapp.adapters.TweetsListItemAdapter;
 import com.mobileappdevelopersclub.fapp.models.Tweet;
 
+import twitter4j.*;
+import twitter4j.conf.ConfigurationBuilder;
+
 public class TweetsListFragment extends FappFragment {
 	
 	private View mView;
 	private Context context;
 	private ListView mList;
 	private TweetsListItemAdapter mAdapter;
+	private Twitter mTwitter;
+
 	
 	public static TweetsListFragment newInstance() {
 		TweetsListFragment fragment = new TweetsListFragment();
@@ -30,6 +38,7 @@ public class TweetsListFragment extends FappFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+        mTwitter = getTwitter();
 	}
 
 	@Override
@@ -44,33 +53,72 @@ public class TweetsListFragment extends FappFragment {
 		mList = (ListView) mView.findViewById(R.id.mList);
 		mList.setAdapter(mAdapter);
 		
-		createTestTweets();
+		//createTestTweets();
+		TwitterInfoTask tweetTask = new TwitterInfoTask();
+		tweetTask.execute();
+		
 		
 		return mView;
 	}
 	
 	/** Test for Tweets list view
 	 **/
+
 	
-	private void createTestTweets() {
-		ArrayList<String> list = new ArrayList<String>();
-		list.add("#UMDfinals");
-		list.add("#UMDgoTerps");
-		
-		for (int i = 0; i < 20; i++) {
-			String currInt = Integer.toString(i);
-			mAdapter.add(new Tweet("twitter_user_" + currInt, "Wow finals are hard, im hungry #UMDfinals", list) );
-			
-		}
-		
+	// Twitter Authentication.  Account info in strings.xml
+    private Twitter getTwitter() {
+        ConfigurationBuilder cb = new ConfigurationBuilder();
+        cb.setOAuthConsumerKey(getString(R.string.consumer_key));
+        cb.setOAuthConsumerSecret(getString(R.string.consumer_secret));
+        cb.setOAuthAccessToken(getString(R.string.access_token));
+        cb.setOAuthAccessTokenSecret(getString(R.string.access_token_secret));
+        return new TwitterFactory(cb.build()).getInstance();
+    }
+	
+    // Formats tweets for listview
+	private void format_tweets(ArrayList<Status> tweets){
+		System.out.println(tweets.toString());
+		for (Status tweet : tweets){
+			System.out.println(tweet.getUser().getName());
+			mAdapter.add(new Tweet('@' + tweet.getUser().getScreenName(), tweet.getText(), tweet.getUser().getOriginalProfileImageURLHttps()) );
+		}		
 	}
 	
+	// Gets tweets with specified hashtags
+	private ArrayList<Status> get_tweets (ArrayList<String> hashes){
+		List<Status> statuses = new ArrayList<Status>();
+		
+		for (String hash: hashes){
+			try {
+        		statuses.addAll(mTwitter.search(new Query(hash)).getTweets());
+    		} catch (Exception e) {
+    			System.out.println("oops no tweets found with text:" + hash);
+    		}
+		}
+
+		return (ArrayList<Status>) statuses;	
+	}
 	
+	private class TwitterInfoTask extends AsyncTask<Object, Void, ArrayList<twitter4j.Status>>{
+
+		@Override
+		protected ArrayList<twitter4j.Status> doInBackground(Object... params) {
+			final ArrayList<String> list = new ArrayList<String>();
+			list.add("#UMDfinals");
+			list.add("#UMDgoTerps");
+			return get_tweets(list);	
+		}
+
+		@Override
+		protected void onPostExecute(ArrayList<twitter4j.Status> result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			format_tweets(result);
+			
+		}
 	
-	
-	
-	
-	
+		
+	}
 	
 	
 }

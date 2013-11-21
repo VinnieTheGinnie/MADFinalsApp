@@ -6,14 +6,16 @@ public class Tweet {
 
 	private String username;
 	private String text;
+	private String miniImage;
 	private ArrayList<String> hashTags;
 	
 	
-	public Tweet(String username, String text, ArrayList<String> hashTags) {
+	public Tweet(String username, String text, String miniImage) {
 		super();
 		this.username = username;
 		this.text = text;
-		this.hashTags = hashTags;
+		this.miniImage= miniImage;
+		//this.hashTags = hashTags;
 	}
 	
 	public String getUsername() {
@@ -27,6 +29,12 @@ public class Tweet {
 	}
 	public void setText(String text){
 		this.text = text;
+	}
+	public String getMiniImage(){
+		return miniImage;
+	}
+	public void setMiniImage(String miniImage){
+		this.miniImage = miniImage;
 	}
 	public ArrayList<String> getHashTags(){
 		return hashTags;

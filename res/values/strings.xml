@@ -11,5 +11,15 @@
 	<string name="class_section_hint">Section</string>
 	<string name="add_class">Add Class</string>
 	<string name="cancel">Cancel</string>
+	
+	<!--	TWITTER APP/ACCOUNT INFO
+		 			CURRENT USER: 	zinglax 
+		 			APP NAME:		twads
+		 			This should be changed to finals app twitter account -->
+	<string name="app_name">TwitterActivity</string>
+    <string name="consumer_key">U20eFnLmaS1eAGIVp1PYGQ</string>
+    <string name="consumer_secret">uKUKcgbxtzPff4UkKXPjD9okQJ1N5a7DJD434BsEss</string>
+    <string name="access_token">23317561-b5CrifbpuOF8M9ZjhYbeWAPpVkCxNZRTW5C6m3oZr</string>
+    <string name="access_token_secret">itaVjDEmrYAueoVm3Yu5zx1XXZPiQaL71Q6aSKwfRRM</string>
     
 </resources>

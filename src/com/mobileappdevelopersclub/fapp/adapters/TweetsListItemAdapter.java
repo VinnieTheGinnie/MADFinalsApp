@@ -54,11 +54,12 @@ public class TweetsListItemAdapter extends ArrayAdapter<Tweet> {
 		
 		Tweet currTweet = mTweets.get(position);
 		
-		Picasso.with(context).load(Constants.MCKELDIN).into(tweetImage);
+		Picasso.with(context).load(currTweet.getMiniImage()).into(tweetImage);
 		
 		tweetUsername.setText(currTweet.getUsername());
 		tweetText.setText(currTweet.getText());
 		
+		/*
 		String formatted_hashtags;
 		formatted_hashtags = "";
 		for (int i = 0; i < currTweet.getHashTags().size(); i++){
@@ -66,6 +67,8 @@ public class TweetsListItemAdapter extends ArrayAdapter<Tweet> {
 		}
 		System.out.print(formatted_hashtags.toString());
 		tweetHashtags.setText(formatted_hashtags);
+		*/
+		
 		
 		return convertView;
 		

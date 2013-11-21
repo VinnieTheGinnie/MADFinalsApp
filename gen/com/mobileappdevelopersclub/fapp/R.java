@@ -38,7 +38,8 @@ public final class R {
         public static final int ic_drawer=0x7f020005;
         public static final int ic_launcher=0x7f020006;
         public static final int ticks=0x7f020007;
-        public static final int white_textured_background=0x7f020008;
+        public static final int twitlogo=0x7f020008;
+        public static final int white_textured_background=0x7f020009;
     }
     public static final class id {
         public static final int Title=0x7f090000;
@@ -96,13 +97,22 @@ public final class R {
         public static final int main=0x7f080000;
     }
     public static final class string {
+        public static final int access_token=0x7f04000d;
+        public static final int access_token_secret=0x7f04000e;
         public static final int action_add_class=0x7f040006;
         public static final int action_settings=0x7f040002;
         public static final int add_class=0x7f040009;
+        /** 	TWITTER APP/ACCOUNT INFO
+		 			CURRENT USER: 	zinglax 
+		 			APP NAME:		twads
+		 			This should be changed to finals app twitter account 
+         */
         public static final int app_name=0x7f040001;
         public static final int cancel=0x7f04000a;
         public static final int class_name_hint=0x7f040007;
         public static final int class_section_hint=0x7f040008;
+        public static final int consumer_key=0x7f04000b;
+        public static final int consumer_secret=0x7f04000c;
         public static final int drawer_close=0x7f040005;
         public static final int drawer_open=0x7f040004;
         public static final int hello=0x7f040000;
