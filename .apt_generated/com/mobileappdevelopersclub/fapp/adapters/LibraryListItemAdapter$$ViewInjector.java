@@ -12,16 +12,16 @@ public class LibraryListItemAdapter$$ViewInjector {
       throw new IllegalStateException("Required view with id '2131296273' for field 'libraryName' was not found. If this field binding is optional add '@Optional'.");
     }
     target.libraryName = (android.widget.TextView) view;
-    view = finder.findById(source, 2131296275);
-    if (view == null) {
-      throw new IllegalStateException("Required view with id '2131296275' for field 'libraryHours' was not found. If this field binding is optional add '@Optional'.");
-    }
-    target.libraryHours = (android.widget.TextView) view;
     view = finder.findById(source, 2131296274);
     if (view == null) {
       throw new IllegalStateException("Required view with id '2131296274' for field 'libraryLocation' was not found. If this field binding is optional add '@Optional'.");
     }
     target.libraryLocation = (android.widget.TextView) view;
+    view = finder.findById(source, 2131296275);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131296275' for field 'libraryHours' was not found. If this field binding is optional add '@Optional'.");
+    }
+    target.libraryHours = (android.widget.TextView) view;
     view = finder.findById(source, 2131296272);
     if (view == null) {
       throw new IllegalStateException("Required view with id '2131296272' for field 'libraryImage' was not found. If this field binding is optional add '@Optional'.");
@@ -31,8 +31,8 @@ public class LibraryListItemAdapter$$ViewInjector {
 
   public static void reset(com.mobileappdevelopersclub.fapp.adapters.LibraryListItemAdapter target) {
     target.libraryName = null;
-    target.libraryHours = null;
     target.libraryLocation = null;
+    target.libraryHours = null;
     target.libraryImage = null;
   }
 }
