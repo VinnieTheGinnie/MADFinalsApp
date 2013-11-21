@@ -1,11 +1,11 @@
 package com.mobileappdevelopersclub.fapp.ui;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -67,7 +67,8 @@ public class DailyScheduleFragment extends Fragment{
 		return view;
 
 	}
-
+	
+	
 
 
 	@Override

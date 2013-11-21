@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.mobileappdevelopersclub.fapp.Constants;
 import com.mobileappdevelopersclub.fapp.FappFragment;
 import com.mobileappdevelopersclub.fapp.R;
 import com.mobileappdevelopersclub.fapp.adapters.LibraryListItemAdapter;
@@ -57,7 +58,7 @@ public class LibraryListFragment extends FappFragment {
 	
 	private void createTestLibraries() {
 		
-		for(int i= 0; i < 20; i++) {
+		for(int i= 0; i < Constants.UMDLIBS.length; i++) {
 			String currInt =  Integer.toString(i);
 			mAdapter.add(new Library("Library " + currInt, "Location " + currInt, "10:00", "10:00", new ArrayList<String>()));
 		}

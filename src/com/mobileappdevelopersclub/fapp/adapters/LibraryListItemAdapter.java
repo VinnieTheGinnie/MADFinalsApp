@@ -55,8 +55,9 @@ public class LibraryListItemAdapter extends ArrayAdapter<Library>{
 		
 		Library currLib = mLibraries.get(position);
 		
-		Picasso.with(context).load(Constants.MCKELDIN).into(libraryImage);
-		
+		if(position < Constants.UMDLIBS.length) {
+			Picasso.with(context).load(Constants.UMDLIBS[position]).into(libraryImage);
+		}
 		
 		libraryName.setText(currLib.getName());
 		libraryLocation.setText(currLib.getLocation());
