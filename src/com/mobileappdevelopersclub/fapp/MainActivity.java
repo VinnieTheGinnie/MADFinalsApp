@@ -29,7 +29,7 @@ public class MainActivity extends FappActivity {
 	private ActionBarDrawerToggle mDrawerToggle;
 
 	public static String[] mDrawerOptions = {"Schedule" , "Food" , "Events" 
-		, "Libraries" , "Transportation", "Tweets #UMDfinals", "Extras"};
+		, "Libraries" , "Transportation", "Testudo's Nose", "Extras"};
 	public static ListView mDrawerList;
 	public static DrawerLayout mDrawerLayout;
 	static MenuListAdapter mMenuAdapter;
