@@ -112,7 +112,7 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		
 		mSpinner = (Spinner) view.findViewById(R.id.daysOfWeek);
 		//TODO: custom spinner adapter 
-		mSpinnerAdapter = new ArrayAdapter<String>(mActivity , android.R.layout.simple_spinner_item, android.R.id.text1, Constants.FINAL_DATES);
+		mSpinnerAdapter = new ArrayAdapter<String>(mActivity , android.R.layout.simple_dropdown_item_1line, android.R.id.text1, Constants.FINAL_DATES);
 		mSpinner.setAdapter(mSpinnerAdapter);
 		mSpinner.setOnItemSelectedListener(this);
 		//			fetchClasses();
