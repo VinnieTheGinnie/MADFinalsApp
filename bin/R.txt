@@ -12,8 +12,7 @@ int drawable ic_launcher 0x7f020006
 int drawable ticks 0x7f020007
 int drawable white_textured_background 0x7f020008
 int id Title 0x7f090000
-int id TweetImage 0x7f09001e
-int id action_add_class 0x7f090022
+int id action_add_class 0x7f090021
 int id btnChangeDate 0x7f090003
 int id classBuilding 0x7f090019
 int id classDate 0x7f090018
@@ -41,10 +40,10 @@ int id subtitle 0x7f09000c
 int id timeSlots 0x7f090015
 int id title 0x7f09000b
 int id tvDate 0x7f090005
-int id tweetHashtags 0x7f090021
+int id tweetHashtags 0x7f090020
 int id tweetImage 0x7f09001d
-int id tweetText 0x7f090020
-int id tweetUsername 0x7f09001f
+int id tweetText 0x7f09001f
+int id tweetUsername 0x7f09001e
 int id username 0x7f090001
 int layout activity_main 0x7f030000
 int layout add_class_dialog 0x7f030001
