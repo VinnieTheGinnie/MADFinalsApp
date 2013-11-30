@@ -42,8 +42,7 @@ public final class R {
     }
     public static final class id {
         public static final int Title=0x7f090000;
-        public static final int TweetImage=0x7f09001e;
-        public static final int action_add_class=0x7f090022;
+        public static final int action_add_class=0x7f090021;
         public static final int btnChangeDate=0x7f090003;
         public static final int classBuilding=0x7f090019;
         public static final int classDate=0x7f090018;
@@ -71,10 +70,10 @@ public final class R {
         public static final int timeSlots=0x7f090016;
         public static final int title=0x7f09000b;
         public static final int tvDate=0x7f090005;
-        public static final int tweetHashtags=0x7f090021;
+        public static final int tweetHashtags=0x7f090020;
         public static final int tweetImage=0x7f09001d;
-        public static final int tweetText=0x7f090020;
-        public static final int tweetUsername=0x7f09001f;
+        public static final int tweetText=0x7f09001f;
+        public static final int tweetUsername=0x7f09001e;
         public static final int username=0x7f090001;
     }
     public static final class layout {

@@ -1,48 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/card_background_white"
-    android:orientation="horizontal" >
-    
-    
+    android:background="@drawable/card_background_white">
+ 
     <ImageView
         android:id="@+id/tweetImage"
-        android:layout_width="0dip"
-        android:layout_weight="0.6"
-        android:layout_height="match_parent"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:padding="5dp"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:contentDescription="@null"
         android:adjustViewBounds="true" />
 
     <LinearLayout
-        android:layout_width="0dip"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_toRightOf="@+id/TweetImage"
-        android:layout_weight="0.89"
-        android:orientation="vertical" >
+        android:layout_toRightOf="@+id/tweetImage"
+        android:orientation="vertical" 
+        android:paddingRight="10dp">
         
         <TextView
             android:id="@+id/tweetUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="0dp"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp" />
+            android:paddingTop="5dp" 
+            android:textSize="18sp"/>
         
      	<TextView
             android:id="@+id/tweetText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="1dp"
-            android:paddingLeft="10dp"/>
+            android:textSize="12sp"/>
     
     	<TextView
             android:id="@+id/tweetHashtags"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingBottom="1dp"
-            android:paddingLeft="10dp"/>
+            android:paddingLeft="5dp"
+            android:paddingBottom="1dp"/>
 
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
