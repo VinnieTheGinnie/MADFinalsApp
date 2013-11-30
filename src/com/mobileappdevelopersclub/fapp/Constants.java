@@ -17,8 +17,8 @@ public class Constants {
 	
 	//Hardcoded final dates for testing 
 	//TODO: GET request for dates that the final will fall on 
-	public static final String[] FINAL_DATES = {"December 14", "December 15", "December 16", "December 17", "December 18" ,
-														"December 19" , "December 20" , "December 21"};
+	public static final String[] FINAL_DATES = {"14", "15", "16", "17", "18" ,
+														"19" , "20" , "21"};
 	
 	public static int pixelsPerHour;
 	public static int pixelsPerTenMin;

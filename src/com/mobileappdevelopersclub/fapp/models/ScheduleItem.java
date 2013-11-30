@@ -13,20 +13,37 @@ public class ScheduleItem extends CouchDbDocument {
 	private static final long serialVersionUID = 1L;
 
 	private final int EIGHT_AM  = 800;
+	private final int START_FLAG = 0;
+	private final int END_FLAG = 1;
+	
 	
 	private String title;
 	private String timeStart;
+	private String time;
 	private String timeEnd;
 	private String date;
+	private String location;
+	private String instructor;
+	private String section;
 	
+	public ScheduleItem() {
+		//Stub
+	}
+		
 	
-	public ScheduleItem(String title, String timeStart, String timeEnd,
-			String date) {
+	public ScheduleItem(String title, String time, String date,
+			String location, String instructor, String section) {
 		super();
 		this.title = title;
-		this.timeStart = timeStart;
-		this.timeEnd = timeEnd;
+		this.time = time;
 		this.date = date;
+		this.location = location;
+		this.instructor = instructor;
+		this.section = section;
+		this.timeStart = parseTime(START_FLAG, time);
+		this.timeEnd = parseTime(END_FLAG, time);
+		
+		
 	}
 
 
@@ -69,6 +86,82 @@ public class ScheduleItem extends CouchDbDocument {
 		this.date = date;
 	}
 	
+	public String getLocation() {
+		return location;
+	}
+
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+
+	public String getInstructor() {
+		return instructor;
+	}
+
+
+	public void setInstructor(String instructor) {
+		this.instructor = instructor;
+	}
+
+	public String getSection() {
+		return section;
+	}
+
+
+	public void setSection(String section) {
+		this.section = section;
+	}
+
+
+	public String getTime() {
+		return time;
+	}
+
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+	
+	//1:30 pm - 3:30 pm
+	// 10:30 am - 11:30 am
+	// 9:30 am - 10:30 am 
+	private String parseTime(int flag, String timeString) {
+		String time = timeString.replace(":", "");
+		String[] arr = time.split("-");
+		if(flag == START_FLAG) {
+			String startTime = arr[0].replace(" ", "");
+			startTime = handleMeridiem(startTime);
+			return startTime;
+		} else {
+			String endTime = arr[1].replace(" ", "");
+			endTime = handleMeridiem(endTime);
+			return endTime;
+		}		
+	}
+	
+	private String handleMeridiem(String time) {
+		if(time.contains("am")) {
+			String newTime = time.replace("am", "");
+			int time_num = Integer.parseInt(newTime);
+			if(time_num >= 1200) {
+				time_num -= 1200;
+			}
+			
+			return Integer.toString(time_num);
+		} else {
+			String newTime = time.replace("pm", "");
+			int time_num = Integer.parseInt(newTime);
+			if(time_num < 1200) {
+				time_num += 1200;
+			}
+			
+			return Integer.toString(time_num);
+		}
+	}
+	
+
 	public String getClassTimeLabel(String day) {
 		StringBuilder sb = new StringBuilder();
 		sb.append(day);
@@ -99,7 +192,7 @@ public class ScheduleItem extends CouchDbDocument {
 		return convertTimeToPixels(timeDifference);
 	}
 	
-	public int getClassStartTime() {
+	public int classStartTime() {
 		int timeDifference = Integer.parseInt(timeStart) - EIGHT_AM;
 
 		return convertTimeToPixels(timeDifference);

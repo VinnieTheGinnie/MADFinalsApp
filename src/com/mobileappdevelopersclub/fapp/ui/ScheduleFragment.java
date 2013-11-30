@@ -2,9 +2,12 @@ package com.mobileappdevelopersclub.fapp.ui;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.inject.Inject;
+
 import org.ektorp.CouchDbConnector;
 import org.ektorp.CouchDbInstance;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -27,11 +30,14 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
 import com.mobileappdevelopersclub.fapp.Constants;
 import com.mobileappdevelopersclub.fapp.FappFragment;
 import com.mobileappdevelopersclub.fapp.R;
+import com.mobileappdevelopersclub.fapp.models.Final;
 import com.mobileappdevelopersclub.fapp.models.ScheduleItem;
 import com.mobileappdevelopersclub.fapp.models.ScheduleItemRepository;
+import com.mobileappdevelopersclub.fapp.transactions.AbsHttpTask;
 
 public class ScheduleFragment extends FappFragment implements OnItemSelectedListener {
 
@@ -41,7 +47,10 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 	public static final String NOT_SET = "Not Set";
 	
 	public static final String TAG = "ScheduleFragment";
-
+	
+	
+	private String GET_FINAL_URL = "http://mobileappdevelopersclub.com/shellp/ShelLp_Final/";
+	
 	//Constants 
 
 	View view; 
@@ -115,7 +124,7 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		mSpinnerAdapter = new ArrayAdapter<String>(mActivity , android.R.layout.simple_dropdown_item_1line, android.R.id.text1, Constants.FINAL_DATES);
 		mSpinner.setAdapter(mSpinnerAdapter);
 		mSpinner.setOnItemSelectedListener(this);
-		//			fetchClasses();
+		fetchClasses();
 		//		}
 		
 		return view;
@@ -158,36 +167,37 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 	////		fetchClasses();
 	//	}
 
-//	public void fetchClasses() {
-//		new FetchClassesTask("GET", UMDClassResponse.getUserUrl()).execute();
-//	}
-//
-//	private class FetchClassesTask extends AbsHttpTask {
-//
-//		public FetchClassesTask(String verb, String url) {
-//			super(verb, url);
-//		}
-//
-//		@Override
-//		protected void onError(String error) {
-//			// TODO Show dialog/message
-//
-//		}
-//
-//		@Override
-//		protected void onSuccess(String response) {
-//
-//			UMDClassResponse classResponse = new Gson().fromJson(
-//					response, UMDClassResponse.class);
+	public void fetchClasses() {
+		String url = buildFinalGetterUrl("CMSC417", "");
+		new FetchClassesTask("GET", url).execute();
+	}
+
+	private class FetchClassesTask extends AbsHttpTask {
+
+		public FetchClassesTask(String verb, String url) {
+			super(verb, url);
+		}
+
+		@Override
+		protected void onError(String error) {
+			// TODO Show dialog/message
+			Log.e(TAG, "error on get");
+		}
+
+		@Override
+		protected void onSuccess(String response) {
+			
+			String test = response;
+		
 //			onClassesFound(classResponse.getClasses());
-//		}
-//
-//	}
-//
-//	private void onClassesFound(List<UMDClass> classes) {
+		}
+
+	}
+
+	private void onClassesFound() {
 //		//TODO: Add classes to the view
 //		mClasses = classes;
-//	}
+	}
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -195,7 +205,7 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		super.onActivityCreated(savedInstanceState);
 		
 		//Pull in saved schedule items to be displayed
-		new CouchDbPullTask().execute();
+//		new CouchDbPullTask().execute();
 	}
 
 	@Override
@@ -212,7 +222,7 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 
 		for(int i=0; i < mScheduleItems.size(); i++) {
 			ScheduleItem curr = mScheduleItems.get(i);
-			if(today.contains(curr.getDate())) {
+			if(curr.getDate().contains(today)) {
 				todaysItems.add(curr);
 			}
 		}
@@ -222,19 +232,23 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 
 	private void generateTestClasses() {
 
-		ScheduleItem meeting = new ScheduleItem("Final 1", "1000", "1050", "December 15");
+		ScheduleItem meeting = new ScheduleItem("Final 1", "10:00 am - 10:50 am", "Fri, Dec 20" , "CSI 1122" , "Agrawala", "0201");
 		
-		ScheduleItem meeting1 = new ScheduleItem("Final 2", "1100", "1150", "December 15");
+		ScheduleItem meeting1 = new ScheduleItem("Final 2", "11:00 am - 11:50 am", "Fri, Dec 20" , "CSI 1122" , "Agrawala", "0201");
 		
-		ScheduleItem meeting2 = new ScheduleItem("Final 3", "1200", "1400", "December 15");
+		ScheduleItem meeting2 = new ScheduleItem("Final 3", "12:00 pm - 12:50 pm", "Fri, Dec 20" , "CSI 1122" , "Agrawala", "0201");
 		
-		ScheduleItem meeting3 = new ScheduleItem("Final 4", "1600", "1700", "December 15");
+		ScheduleItem meeting3 = new ScheduleItem("Final 4", "1:00 pm - 1:50 pm", "Fri, Dec 20" , "CSI 1122" , "Agrawala", "0201");
 
 		mScheduleItems = new ArrayList<ScheduleItem>();
 		mScheduleItems.add(meeting);
 		mScheduleItems.add(meeting1);
 		mScheduleItems.add(meeting2);
 		mScheduleItems.add(meeting3);
+		
+//		for(int i =0 ; i < mScheduleItems.size(); i++){
+//			new CouchDbCommitTask().execute(mScheduleItems.get(i));
+//		}
 
 	}
 
@@ -273,6 +287,41 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		
 	}
 	
+	
+	private class CouchDbCommitTask extends AsyncTask<ScheduleItem, Void, Void> {
+
+		public CouchDbCommitTask() {
+
+		}
+
+		@Override
+		protected Void doInBackground(ScheduleItem... arg0) {
+			commitItem(arg0[0]);
+			return null;
+		}
+
+
+		private void commitItem(ScheduleItem item) {
+			
+			CouchDbConnector couchDbConnector = dbInstance.createConnector(Constants.DATABASE_NAME, true);
+			ScheduleItemRepository repo = new ScheduleItemRepository(couchDbConnector);
+			boolean exists = false;
+
+			for(ScheduleItem curr: repo.getAll()) {
+				if(curr.getTitle().equals(item.getTime())) {
+					exists = true;
+				}
+			}
+			
+			if(!exists) {
+				repo.add((ScheduleItem)item);
+			}
+			
+		}
+
+	}
+	
+	
 	private class CouchDbPullTask extends AsyncTask<Void, Void, ArrayList<ScheduleItem>> {
 
 		public CouchDbPullTask() {
@@ -302,6 +351,14 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		}
 
 
+	}
+	
+	private String buildFinalGetterUrl(String currentClass, String currentSection) {
+		StringBuilder sb = new StringBuilder();
+		sb.append(GET_FINAL_URL);
+		sb.append(currentClass);
+		
+		return sb.toString();
 	}
 
 }

@@ -90,7 +90,7 @@ public class DailyScheduleFragment extends Fragment{
 			LinearLayout classItemLayout =  (LinearLayout) mInflater.inflate(R.layout.schedule_list_item , null);
 			int height = currItem.getClassLength();
 			FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT , height);
-			params.setMargins(0, currItem.getClassStartTime(), 0, 0);
+			params.setMargins(0, currItem.classStartTime(), 0, 0);
 			classItemLayout.setLayoutParams(params);
 			addClassInfo(currItem.getTitle(), currItem, classItemLayout );
 			classes.addView(classItemLayout);
