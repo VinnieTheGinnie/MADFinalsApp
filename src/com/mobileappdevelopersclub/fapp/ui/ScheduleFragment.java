@@ -29,12 +29,15 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 
+import com.google.gson.Gson;
 import com.mobileappdevelopersclub.fapp.Constants;
 import com.mobileappdevelopersclub.fapp.FappFragment;
 import com.mobileappdevelopersclub.fapp.R;
 import com.mobileappdevelopersclub.fapp.models.Final;
+import com.mobileappdevelopersclub.fapp.models.FinalResponse;
 import com.mobileappdevelopersclub.fapp.models.ScheduleItem;
 import com.mobileappdevelopersclub.fapp.models.ScheduleItemRepository;
 import com.mobileappdevelopersclub.fapp.transactions.AbsHttpTask;
@@ -168,7 +171,7 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 	//	}
 
 	public void fetchClasses() {
-		String url = buildFinalGetterUrl("CMSC417", "");
+		String url = buildFinalGetterUrl("ENGL280", "");
 		new FetchClassesTask("GET", url).execute();
 	}
 
@@ -187,16 +190,31 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		@Override
 		protected void onSuccess(String response) {
 			
-			String test = response;
-		
-//			onClassesFound(classResponse.getClasses());
+			String header = "{ \"finals\":";
+			
+			String resWHead = header.concat(response);
+			String newResponse = resWHead.concat(" }");
+				
+			FinalResponse finalResponse = new Gson().fromJson(
+					newResponse, FinalResponse.class);		
+			onClassesFound(finalResponse.getFinals());
 		}
 
 	}
 
-	private void onClassesFound() {
-//		//TODO: Add classes to the view
-//		mClasses = classes;
+	private void onClassesFound(List<Final> finals) {
+		//TODO: Add finals to dialog and display to user 
+		
+		//Test Loop
+		for(int i=0; i < finals.size(); i++) {
+			Final f = finals.get(i);
+			Log.d("section", f.getSection());
+			Log.d("day", f.getDay());
+			Log.d("time", f.getTime());
+			Log.d("location", f.getLocation());
+			Log.d("instructor", f.getInstructor());
+		}
+		
 	}
 
 	@Override
@@ -222,7 +240,7 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 
 		for(int i=0; i < mScheduleItems.size(); i++) {
 			ScheduleItem curr = mScheduleItems.get(i);
-			if(curr.getDate().contains(today)) {
+			if(curr.getDay().contains(today)) {
 				todaysItems.add(curr);
 			}
 		}
@@ -279,6 +297,39 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		           .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
 		               public void onClick(DialogInterface dialog, int id) {
 		                   EnterClassDialogFragment.this.getDialog().cancel();
+		               }
+		           });      
+		    return builder.create();
+		}
+
+		
+	}
+	
+	public static class FinalResponseDialogFragment extends DialogFragment {
+		
+		ListView mList;
+		
+		@Override
+		public Dialog onCreateDialog(Bundle savedInstanceState) {
+		    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+		    // Get the layout inflater
+		    LayoutInflater inflater = getActivity().getLayoutInflater();
+		    
+		    mList = (ListView) inflater.inflate(R.layout.final_resp_dialog, null);
+		    
+		    // Inflate and set the layout for the dialog
+		    // Pass null as the parent view because its going in the dialog layout
+		    builder.setView(inflater.inflate(R.layout.final_resp_dialog, null))
+		    // Add action buttons
+		           .setPositiveButton(R.string.add_class, new DialogInterface.OnClickListener() {
+		               @Override
+		               public void onClick(DialogInterface dialog, int id) {
+		                  //make request for final info
+		               }
+		           })
+		           .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+		               public void onClick(DialogInterface dialog, int id) {
+		                   FinalResponseDialogFragment.this.getDialog().cancel();
 		               }
 		           });      
 		    return builder.create();

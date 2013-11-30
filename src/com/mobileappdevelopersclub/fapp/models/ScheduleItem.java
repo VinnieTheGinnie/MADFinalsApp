@@ -21,7 +21,7 @@ public class ScheduleItem extends CouchDbDocument {
 	private String timeStart;
 	private String time;
 	private String timeEnd;
-	private String date;
+	private String day;
 	private String location;
 	private String instructor;
 	private String section;
@@ -31,12 +31,12 @@ public class ScheduleItem extends CouchDbDocument {
 	}
 		
 	
-	public ScheduleItem(String title, String time, String date,
+	public ScheduleItem(String title, String time, String day,
 			String location, String instructor, String section) {
 		super();
 		this.title = title;
 		this.time = time;
-		this.date = date;
+		this.day = day;
 		this.location = location;
 		this.instructor = instructor;
 		this.section = section;
@@ -77,13 +77,13 @@ public class ScheduleItem extends CouchDbDocument {
 	}
 
 
-	public String getDate() {
-		return date;
+	public String getDay() {
+		return day;
 	}
 
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setDate(String day) {
+		this.day = day;
 	}
 	
 	public String getLocation() {
