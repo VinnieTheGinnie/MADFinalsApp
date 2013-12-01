@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Fapp</string>
+    <string name="app_name">UMD Finals App</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 	<string name="drawer_open">Drawer Open</string>
@@ -9,7 +9,7 @@
 	<string name="action_add_class">Add a class to get final</string>
 	<string name="class_name_hint">Class Name, ex "CMSC411"</string>
 	<string name="class_section_hint">Section</string>
-	<string name="add_class">Add Class</string>
+	<string name="add_class">Search Class</string>
 	<string name="cancel">Cancel</string>
 	
 	<!--	TWITTER APP/ACCOUNT INFO
