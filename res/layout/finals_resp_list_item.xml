@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
-    android:orientation="vertical" >
-    
+    android:padding="10dp" >
+
     <TextView
         android:id="@+id/className"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/examDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/className" />
+
+    <TextView
+        android:id="@+id/examTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/className"
+        android:layout_toRightOf="@+id/examDate"
+        android:paddingLeft="5dp" />
+
+    <TextView
+        android:id="@+id/examLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/className"
+        android:layout_toRightOf="@+id/examTime"
+        android:paddingLeft="5dp" />
+
+    <TextView
+        android:id="@+id/examInstructor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/examDate" />
+
+    <TextView
+        android:id="@+id/classSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/examDate"
+        android:layout_toRightOf="@+id/examInstructor"
+        android:paddingLeft="5dp" />
+
+</RelativeLayout>

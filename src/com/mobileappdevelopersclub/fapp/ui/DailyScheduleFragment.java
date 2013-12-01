@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.mobileappdevelopersclub.fapp.Constants;
 import com.mobileappdevelopersclub.fapp.R;
 import com.mobileappdevelopersclub.fapp.models.ScheduleItem;
+import com.mobileappdevelopersclub.fapp.util.ScheduleItemUtil;
 
 
 
@@ -87,10 +88,19 @@ public class DailyScheduleFragment extends Fragment{
 
 		for(int i=0; i < items.size(); i++) {
 			ScheduleItem currItem = items.get(i);
-			LinearLayout classItemLayout =  (LinearLayout) mInflater.inflate(R.layout.schedule_list_item , null);
-			int height = currItem.getClassLength();
-			FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT , height);
-			params.setMargins(0, currItem.classStartTime(), 0, 0);
+			
+			LinearLayout classItemLayout =  
+					(LinearLayout) mInflater.inflate(
+							R.layout.schedule_list_item , null);
+			
+			int height = ScheduleItemUtil.getClassLength(currItem);
+			
+			FrameLayout.LayoutParams params = 
+					new FrameLayout.LayoutParams(
+							LinearLayout.LayoutParams.MATCH_PARENT , height);
+			
+			params.setMargins(0, ScheduleItemUtil.classStartTime(currItem),
+					0, 0);
 			classItemLayout.setLayoutParams(params);
 			addClassInfo(currItem.getTitle(), currItem, classItemLayout );
 			classes.addView(classItemLayout);
@@ -98,9 +108,11 @@ public class DailyScheduleFragment extends Fragment{
 
 	}
 
-	private void addClassInfo(String className, ScheduleItem currMeeting, LinearLayout classItemLayout) { 
+	private void addClassInfo(String className,
+			ScheduleItem currMeeting, LinearLayout classItemLayout) { 
 
-		((TextView)classItemLayout.findViewById(R.id.className)).setText(className);
+		((TextView)classItemLayout.findViewById(R.id.className)).
+			setText(className);
 
 	}
 

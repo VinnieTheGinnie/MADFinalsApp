@@ -29,13 +29,14 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.google.gson.Gson;
 import com.mobileappdevelopersclub.fapp.Constants;
 import com.mobileappdevelopersclub.fapp.FappFragment;
 import com.mobileappdevelopersclub.fapp.R;
+import com.mobileappdevelopersclub.fapp.adapters.FinalsResponseAdapter;
 import com.mobileappdevelopersclub.fapp.models.Final;
 import com.mobileappdevelopersclub.fapp.models.FinalResponse;
 import com.mobileappdevelopersclub.fapp.models.ScheduleItem;
@@ -48,12 +49,12 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 	public static final String USERNAME = "Username";
 	public static final String PASSWORD = "Password";
 	public static final String NOT_SET = "Not Set";
-	
+
 	public static final String TAG = "ScheduleFragment";
-	
-	
+
+
 	private String GET_FINAL_URL = "http://mobileappdevelopersclub.com/shellp/ShelLp_Final/";
-	
+
 	//Constants 
 
 	View view; 
@@ -63,7 +64,8 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 	SharedPreferences userInfo;
 	LayoutInflater inflater;
 	private List<ScheduleItem> mScheduleItems;
-	
+	private static String mCurrentClass;
+
 	@Inject CouchDbInstance dbInstance;
 
 	public static ScheduleFragment newInstance() {
@@ -121,22 +123,18 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		//		} else {
 		setHasOptionsMenu(true);
 		view = inflater.inflate(R.layout.schedulefragment_main, null);	
-		
+
 		mSpinner = (Spinner) view.findViewById(R.id.daysOfWeek);
-		//TODO: custom spinner adapter 
 		mSpinnerAdapter = new ArrayAdapter<String>(mActivity , android.R.layout.simple_dropdown_item_1line, android.R.id.text1, Constants.FINAL_DATES);
 		mSpinner.setAdapter(mSpinnerAdapter);
 		mSpinner.setOnItemSelectedListener(this);
-		fetchClasses();
-		//		}
-		
+
 		return view;
 	}
-	
-	
+
+
 	@Override
 	public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-		// TODO Auto-generated method stub
 		inflater.inflate(R.menu.main , menu);
 		MenuItem addClass = menu.findItem(R.id.action_add_class);
 		addClass.setOnMenuItemClickListener(new OnMenuItemClickListener(){
@@ -146,32 +144,17 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 				new EnterClassDialogFragment().show(getFragmentManager(), "Entering a new Class");
 				return false;
 			}
-			
+
 		});
 
 		super.onCreateOptionsMenu(menu, inflater);
 	}
-	
-	
 
 
 
-	//	private void testInflate(){
-	//		Toast.makeText(mActivity, "Trying to inflate", Toast.LENGTH_SHORT).show();
-	//		setHasOptionsMenu(true);
-	//		view = inflater.inflate(R.layout.schedulefragment_main, null);
-	//
-	//		mSpinner = (Spinner) view.findViewById(R.id.daysOfWeek);
-	//		mSpinnerAdapter = new ArrayAdapter<String>(Globals.actionBar.getThemedContext(),
-	//				android.R.layout.simple_spinner_item, android.R.id.text1, daysOfWeek);
-	//		mSpinner.setAdapter(mSpinnerAdapter);
-	//		mSpinner.setOnItemSelectedListener(this);
-	//		view.refreshDrawableState();
-	////		fetchClasses();
-	//	}
-
-	public void fetchClasses() {
-		String url = buildFinalGetterUrl("ENGL280", "");
+	public void fetchClasses(String className) {
+		mCurrentClass = className;
+		String url = buildFinalGetterUrl(className, "");
 		new FetchClassesTask("GET", url).execute();
 	}
 
@@ -189,12 +172,12 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 
 		@Override
 		protected void onSuccess(String response) {
-			
+
 			String header = "{ \"finals\":";
-			
+
 			String resWHead = header.concat(response);
 			String newResponse = resWHead.concat(" }");
-				
+
 			FinalResponse finalResponse = new Gson().fromJson(
 					newResponse, FinalResponse.class);		
 			onClassesFound(finalResponse.getFinals());
@@ -203,27 +186,24 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 	}
 
 	private void onClassesFound(List<Final> finals) {
-		//TODO: Add finals to dialog and display to user 
 		
-		//Test Loop
-		for(int i=0; i < finals.size(); i++) {
-			Final f = finals.get(i);
-			Log.d("section", f.getSection());
-			Log.d("day", f.getDay());
-			Log.d("time", f.getTime());
-			Log.d("location", f.getLocation());
-			Log.d("instructor", f.getInstructor());
+		for(int i = 0 ; i < finals.size(); i++) {
+			finals.get(i).setTitle(mCurrentClass);
 		}
 		
+		
+		FinalResponseDialogFragment.newInstance(finals)
+			.show(getFragmentManager(), "Entering a new Class");
+			
 	}
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onActivityCreated(savedInstanceState);
-		
+
 		//Pull in saved schedule items to be displayed
-//		new CouchDbPullTask().execute();
+		//		new CouchDbPullTask().execute();
 	}
 
 	@Override
@@ -232,7 +212,7 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		ArrayList<ScheduleItem> todaysList = getTodaysList(position);		
 		fm.beginTransaction().replace(R.id.schedule, DailyScheduleFragment.newInstance(position, todaysList)).commit();
 	}
-	
+
 
 	private ArrayList<ScheduleItem> getTodaysList(int day) {
 		ArrayList<ScheduleItem> todaysItems = new ArrayList<ScheduleItem>();
@@ -244,18 +224,18 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 				todaysItems.add(curr);
 			}
 		}
-		
+
 		return todaysItems;
 	}
 
 	private void generateTestClasses() {
 
 		ScheduleItem meeting = new ScheduleItem("Final 1", "10:00 am - 10:50 am", "Fri, Dec 20" , "CSI 1122" , "Agrawala", "0201");
-		
+
 		ScheduleItem meeting1 = new ScheduleItem("Final 2", "11:00 am - 11:50 am", "Fri, Dec 20" , "CSI 1122" , "Agrawala", "0201");
-		
+
 		ScheduleItem meeting2 = new ScheduleItem("Final 3", "12:00 pm - 12:50 pm", "Fri, Dec 20" , "CSI 1122" , "Agrawala", "0201");
-		
+
 		ScheduleItem meeting3 = new ScheduleItem("Final 4", "1:00 pm - 1:50 pm", "Fri, Dec 20" , "CSI 1122" , "Agrawala", "0201");
 
 		mScheduleItems = new ArrayList<ScheduleItem>();
@@ -263,82 +243,99 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		mScheduleItems.add(meeting1);
 		mScheduleItems.add(meeting2);
 		mScheduleItems.add(meeting3);
-		
-//		for(int i =0 ; i < mScheduleItems.size(); i++){
-//			new CouchDbCommitTask().execute(mScheduleItems.get(i));
-//		}
+
+		//		for(int i =0 ; i < mScheduleItems.size(); i++){
+		//			new CouchDbCommitTask().execute(mScheduleItems.get(i));
+		//		}
 
 	}
 
 	@Override
 	public void onNothingSelected(AdapterView<?> arg0) {
-		
+
 	}
-	
-	
-	public static class EnterClassDialogFragment extends DialogFragment {
-		
+
+
+	@SuppressLint("ValidFragment")
+	public class EnterClassDialogFragment extends DialogFragment {
+
 		@Override
 		public Dialog onCreateDialog(Bundle savedInstanceState) {
-		    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-		    // Get the layout inflater
-		    LayoutInflater inflater = getActivity().getLayoutInflater();
-
-		    // Inflate and set the layout for the dialog
-		    // Pass null as the parent view because its going in the dialog layout
-		    builder.setView(inflater.inflate(R.layout.add_class_dialog, null))
-		    // Add action buttons
-		           .setPositiveButton(R.string.add_class, new DialogInterface.OnClickListener() {
-		               @Override
-		               public void onClick(DialogInterface dialog, int id) {
-		                  //make request for final info
-		               }
-		           })
-		           .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-		               public void onClick(DialogInterface dialog, int id) {
-		                   EnterClassDialogFragment.this.getDialog().cancel();
-		               }
-		           });      
-		    return builder.create();
+			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+			// Get the layout inflater
+			LayoutInflater inflater = getActivity().getLayoutInflater();
+			
+			final View view = inflater.inflate(R.layout.add_class_dialog, null);
+			// Inflate and set the layout for the dialog
+			// Pass null as the parent view because its going in the dialog layout
+			builder.setView(view)
+			// Add action buttons
+			.setPositiveButton(R.string.add_class, new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int id) {
+					EditText className = (EditText) view.findViewById(R.id.className);
+					fetchClasses(className.getText().toString());					
+				}
+			})
+			.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					EnterClassDialogFragment.this.getDialog().cancel();
+				}
+			});      
+			return builder.create();
 		}
 
-		
+
 	}
-	
+
 	public static class FinalResponseDialogFragment extends DialogFragment {
-		
-		ListView mList;
-		
-		@Override
-		public Dialog onCreateDialog(Bundle savedInstanceState) {
-		    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-		    // Get the layout inflater
-		    LayoutInflater inflater = getActivity().getLayoutInflater();
-		    
-		    mList = (ListView) inflater.inflate(R.layout.final_resp_dialog, null);
-		    
-		    // Inflate and set the layout for the dialog
-		    // Pass null as the parent view because its going in the dialog layout
-		    builder.setView(inflater.inflate(R.layout.final_resp_dialog, null))
-		    // Add action buttons
-		           .setPositiveButton(R.string.add_class, new DialogInterface.OnClickListener() {
-		               @Override
-		               public void onClick(DialogInterface dialog, int id) {
-		                  //make request for final info
-		               }
-		           })
-		           .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-		               public void onClick(DialogInterface dialog, int id) {
-		                   FinalResponseDialogFragment.this.getDialog().cancel();
-		               }
-		           });      
-		    return builder.create();
+
+		List<Final> finals;
+
+		public static FinalResponseDialogFragment newInstance(List<Final> finals) {
+			FinalResponseDialogFragment fragment =
+					new FinalResponseDialogFragment();
+			fragment.finals = finals;
+			return fragment;
 		}
 
-		
+
+		@Override
+		public Dialog onCreateDialog(Bundle savedInstanceState) {
+			AlertDialog.Builder builder = 
+					new AlertDialog.Builder(getActivity());
+			// Get the layout inflater
+			LayoutInflater inflater = getActivity().getLayoutInflater();
+
+			FinalsResponseAdapter adapter 
+			= new FinalsResponseAdapter(this.getActivity(), 0, finals);
+
+			// Inflate and set the layout for the dialog
+			// Pass null as the parent view because its going in the dialog layout
+			builder.setView(inflater.inflate(R.layout.final_resp_dialog, null))
+			// Add action buttons
+			.setTitle("Final dates for " + mCurrentClass)
+			.setAdapter(adapter, null)
+//			.setPositiveButton(R.string.add_class, 
+//					new DialogInterface.OnClickListener() {
+//				@Override
+//				public void onClick(DialogInterface dialog, int id) {
+//					//make request for final info
+//				}
+//			})
+			.setNegativeButton(R.string.cancel,
+					new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					FinalResponseDialogFragment.this.getDialog().cancel();
+				}
+			});      
+			return builder.create();
+		}
+
+
 	}
-	
-	
+
+
 	private class CouchDbCommitTask extends AsyncTask<ScheduleItem, Void, Void> {
 
 		public CouchDbCommitTask() {
@@ -353,7 +350,7 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 
 
 		private void commitItem(ScheduleItem item) {
-			
+
 			CouchDbConnector couchDbConnector = dbInstance.createConnector(Constants.DATABASE_NAME, true);
 			ScheduleItemRepository repo = new ScheduleItemRepository(couchDbConnector);
 			boolean exists = false;
@@ -363,16 +360,16 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 					exists = true;
 				}
 			}
-			
+
 			if(!exists) {
 				repo.add((ScheduleItem)item);
 			}
-			
+
 		}
 
 	}
-	
-	
+
+
 	private class CouchDbPullTask extends AsyncTask<Void, Void, ArrayList<ScheduleItem>> {
 
 		public CouchDbPullTask() {
@@ -387,7 +384,7 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 
 
 		private ArrayList<ScheduleItem> getScheduleItems() {
-			
+
 			CouchDbConnector couchDbConnector = dbInstance.createConnector(Constants.DATABASE_NAME, true);
 			ScheduleItemRepository repo = new ScheduleItemRepository(couchDbConnector);
 
@@ -397,18 +394,18 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 			for(ScheduleItem curr: repo.getAll()) {
 				items.add(curr);
 			}
-			
+
 			return items;	
 		}
 
 
 	}
-	
+
 	private String buildFinalGetterUrl(String currentClass, String currentSection) {
 		StringBuilder sb = new StringBuilder();
 		sb.append(GET_FINAL_URL);
 		sb.append(currentClass);
-		
+
 		return sb.toString();
 	}
 
