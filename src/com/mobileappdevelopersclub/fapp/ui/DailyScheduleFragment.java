@@ -57,7 +57,7 @@ public class DailyScheduleFragment extends Fragment{
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
+		
 		super.onCreateView(inflater, container, savedInstanceState);
 		mInflater = inflater;
 		view = inflater.inflate(R.layout.schedule_layout, null);
@@ -74,7 +74,7 @@ public class DailyScheduleFragment extends Fragment{
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
+
 		super.onActivityCreated(savedInstanceState);
 		buildSchedule();
 	}
@@ -113,6 +113,25 @@ public class DailyScheduleFragment extends Fragment{
 
 		((TextView)classItemLayout.findViewById(R.id.className)).
 			setText(className);
+		
+		((TextView)classItemLayout.findViewById(R.id.date)).
+		setText(currMeeting.getDay());
+		
+		((TextView)classItemLayout.findViewById(R.id.time)).
+		setText(currMeeting.getTime());
+		
+		((TextView)classItemLayout.findViewById(R.id.location)).
+		setText(currMeeting.getLocation());
+		
+		((TextView)classItemLayout.findViewById(R.id.instructor)).
+		setText(currMeeting.getInstructor());
+
+		
+		((TextView)classItemLayout.findViewById(R.id.section)).
+		setText(currMeeting.getSection());
+
+
+
 
 	}
 

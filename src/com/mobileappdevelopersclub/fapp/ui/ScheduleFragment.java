@@ -54,6 +54,11 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 
 	public static final String TAG = "ScheduleFragment";
 
+	private final String[] SPINNER_DATES = {"December 14", "December 15",
+			"December 16", "December 17", "December 18" , "December 19" ,
+				"December 20" , "December 21"};
+
+	
 
 	private String GET_FINAL_URL = "http://mobileappdevelopersclub.com/shellp/ShelLp_Final/";
 
@@ -90,46 +95,14 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 			Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);
 		this.inflater = inflater;
-		//		Schedule Feature not yet implemented 
-		//		if(userInfo.getString(USERNAME, NOT_SET).equals(NOT_SET) || userInfo.getString(PASSWORD, NOT_SET).equals(NOT_SET) ) {
-		//			//This code should only run on 1st run of application 
-		//
-		//			view = inflater.inflate(R.layout.login_layout, null);
-		//			final EditText username = (EditText) view.findViewById(R.id.email_login);
-		//			final EditText passWord = (EditText) view.findViewById(R.id.password_login);
-		//			view.findViewById(R.id.submit).setOnTouchListener(new OnTouchListener(){
-		//
-		//				@Override
-		//				public boolean onTouch(View v, MotionEvent event) {
-		//					String user = username.getText().toString();
-		//					String pass = passWord.getText().toString();
-		//
-		//
-		//					if(!TextUtils.isEmpty(user) && !TextUtils.isEmpty(pass)) {
-		//						SharedPreferences userInfo = getActivity().getSharedPreferences(PREFS_NAME, 0);
-		//						SharedPreferences.Editor editor = userInfo.edit();
-		//						editor.putString(USERNAME, user);
-		//						editor.putString(PASSWORD, pass);
-		//
-		//						editor.commit();
-		//						
-		//						testInflate();
-		//
-		//					} else {
-		//						Toast.makeText(mActivity, "Username or Password Not entered", Toast.LENGTH_SHORT).show();
-		//					}
-		//					return true;
-		//					
-		//				}});
-		//
-		//		} else {
+
 		setHasOptionsMenu(true);
 		view = inflater.inflate(R.layout.schedulefragment_main, null);	
 
 		mSpinner = (Spinner) view.findViewById(R.id.daysOfWeek);
 		mSpinnerAdapter = new ArrayAdapter<String>(mActivity ,
 				android.R.layout.simple_dropdown_item_1line, android.R.id.text1, 
-					Constants.FINAL_DATES);
+					SPINNER_DATES);
 		mSpinner.setAdapter(mSpinnerAdapter);
 		mSpinner.setOnItemSelectedListener(this);
 

@@ -42,14 +42,13 @@ public final class R {
     }
     public static final class id {
         public static final int Title=0x7f090000;
-        public static final int action_add_class=0x7f090024;
+        public static final int action_add_class=0x7f090027;
         public static final int btnChangeDate=0x7f090002;
-        public static final int classBuilding=0x7f09001c;
-        public static final int classDate=0x7f09001b;
         public static final int className=0x7f090001;
         public static final int classSection=0x7f090011;
         public static final int classes=0x7f09001a;
-        public static final int daysOfWeek=0x7f09001e;
+        public static final int date=0x7f09001b;
+        public static final int daysOfWeek=0x7f090021;
         public static final int dpResult=0x7f090005;
         public static final int drawer_layout=0x7f090006;
         public static final int examDate=0x7f09000d;
@@ -57,27 +56,31 @@ public final class R {
         public static final int examLocation=0x7f09000f;
         public static final int examTime=0x7f09000e;
         public static final int icon=0x7f090009;
+        public static final int instructor=0x7f09001e;
         public static final int lblDate=0x7f090003;
         public static final int left_drawer=0x7f090008;
         public static final int libraryHours=0x7f090018;
         public static final int libraryImage=0x7f090015;
         public static final int libraryLocation=0x7f090017;
         public static final int libraryName=0x7f090016;
+        public static final int location=0x7f09001d;
         public static final int mList=0x7f09000c;
         public static final int main_frame=0x7f090007;
         public static final int resterauntImage=0x7f090012;
         public static final int resterauntName=0x7f090013;
         public static final int resterauntSpecial=0x7f090014;
-        public static final int schedule=0x7f09001f;
-        public static final int scheduleLayout=0x7f09001d;
+        public static final int schedule=0x7f090022;
+        public static final int scheduleLayout=0x7f090020;
+        public static final int section=0x7f09001f;
         public static final int subtitle=0x7f09000b;
+        public static final int time=0x7f09001c;
         public static final int timeSlots=0x7f090019;
         public static final int title=0x7f09000a;
         public static final int tvDate=0x7f090004;
-        public static final int tweetHashtags=0x7f090023;
-        public static final int tweetImage=0x7f090020;
-        public static final int tweetText=0x7f090022;
-        public static final int tweetUsername=0x7f090021;
+        public static final int tweetHashtags=0x7f090026;
+        public static final int tweetImage=0x7f090023;
+        public static final int tweetText=0x7f090025;
+        public static final int tweetUsername=0x7f090024;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
