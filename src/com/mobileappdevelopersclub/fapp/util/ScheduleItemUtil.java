@@ -7,6 +7,7 @@ public class ScheduleItemUtil {
 	
 	private final static int START_FLAG = 0;
 	private final static int EIGHT_AM  = 800;
+	private final static int END_FLAG = 1;
 	
 	public static String parseTime(int flag, String timeString) {
 		String time = timeString.replace(":", "");
@@ -47,9 +48,9 @@ public class ScheduleItemUtil {
 		StringBuilder sb = new StringBuilder();
 		sb.append(day);
 		sb.append(" ");
-		sb.append(getTimeFormat(f.getTimeStart()));
+		sb.append(getTimeFormat(getTimeStart(f)));
 		sb.append(" - ");
-		sb.append(getTimeFormat(f.getTimeEnd()));
+		sb.append(getTimeFormat(getTimeEnd(f)));
 		
 		return sb.toString();
 	}
@@ -69,16 +70,24 @@ public class ScheduleItemUtil {
 	
 	public static int getClassLength(ScheduleItem f) {
 		int timeDifference =
-				Integer.parseInt(f.getTimeEnd()) - 
-					Integer.parseInt(f.getTimeStart());
+				Integer.parseInt(getTimeEnd(f)) - 
+					Integer.parseInt(getTimeStart(f));
 
 		return convertTimeToPixels(timeDifference);
 	}
 	
 	public static int classStartTime(ScheduleItem f) {
-		int timeDifference = Integer.parseInt(f.getTimeStart()) - EIGHT_AM;
+		int timeDifference = Integer.parseInt(getTimeStart(f)) - EIGHT_AM;
 
 		return convertTimeToPixels(timeDifference);
+	}
+	
+	public static String getTimeStart(ScheduleItem f) {
+		return ScheduleItemUtil.parseTime(START_FLAG, f.getTime());
+	}
+	
+	public static String getTimeEnd(ScheduleItem f) {
+		return ScheduleItemUtil.parseTime(END_FLAG, f.getTime());
 	}
 	
 	private static int convertTimeToPixels(int timeDifference) {

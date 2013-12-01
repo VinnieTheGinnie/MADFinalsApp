@@ -12,11 +12,6 @@ public class TweetsListItemAdapter$$ViewInjector {
       throw new IllegalStateException("Required view with id '2131296291' for field 'tweetHashtags' was not found. If this field binding is optional add '@Optional'.");
     }
     target.tweetHashtags = (android.widget.TextView) view;
-    view = finder.findById(source, 2131296288);
-    if (view == null) {
-      throw new IllegalStateException("Required view with id '2131296288' for field 'tweetImage' was not found. If this field binding is optional add '@Optional'.");
-    }
-    target.tweetImage = (android.widget.ImageView) view;
     view = finder.findById(source, 2131296290);
     if (view == null) {
       throw new IllegalStateException("Required view with id '2131296290' for field 'tweetText' was not found. If this field binding is optional add '@Optional'.");
@@ -27,12 +22,17 @@ public class TweetsListItemAdapter$$ViewInjector {
       throw new IllegalStateException("Required view with id '2131296289' for field 'tweetUsername' was not found. If this field binding is optional add '@Optional'.");
     }
     target.tweetUsername = (android.widget.TextView) view;
+    view = finder.findById(source, 2131296288);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131296288' for field 'tweetImage' was not found. If this field binding is optional add '@Optional'.");
+    }
+    target.tweetImage = (android.widget.ImageView) view;
   }
 
   public static void reset(com.mobileappdevelopersclub.fapp.adapters.TweetsListItemAdapter target) {
     target.tweetHashtags = null;
-    target.tweetImage = null;
     target.tweetText = null;
     target.tweetUsername = null;
+    target.tweetImage = null;
   }
 }

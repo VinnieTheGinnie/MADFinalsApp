@@ -2,8 +2,6 @@ package com.mobileappdevelopersclub.fapp.models;
 
 import org.ektorp.support.CouchDbDocument;
 
-import com.mobileappdevelopersclub.fapp.Constants;
-import com.mobileappdevelopersclub.fapp.util.ScheduleItemUtil;
 
 
 public class ScheduleItem extends CouchDbDocument {
@@ -12,16 +10,9 @@ public class ScheduleItem extends CouchDbDocument {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-	private final int EIGHT_AM  = 800;
-	private final int START_FLAG = 0;
-	private final int END_FLAG = 1;
-	
 	
 	private String title;
-	private String timeStart;
 	private String time;
-	private String timeEnd;
 	private String day;
 	private String location;
 	private String instructor;
@@ -41,8 +32,8 @@ public class ScheduleItem extends CouchDbDocument {
 		this.location = location;
 		this.instructor = instructor;
 		this.section = section;
-		this.timeStart = ScheduleItemUtil.parseTime(START_FLAG, time);
-		this.timeEnd = ScheduleItemUtil.parseTime(END_FLAG, time);
+//		this.timeStart = ScheduleItemUtil.parseTime(START_FLAG, time);
+//		this.timeEnd = ScheduleItemUtil.parseTime(END_FLAG, time);
 		
 		
 	}
@@ -55,26 +46,6 @@ public class ScheduleItem extends CouchDbDocument {
 
 	public void setTitle(String title) {
 		this.title = title;
-	}
-
-
-	public String getTimeStart() {
-		return timeStart;
-	}
-
-
-	public void setTimeStart(String timeStart) {
-		this.timeStart = timeStart;
-	}
-
-
-	public String getTimeEnd() {
-		return timeEnd;
-	}
-
-
-	public void setTimeEnd(String timeEnd) {
-		this.timeEnd = timeEnd;
 	}
 
 
