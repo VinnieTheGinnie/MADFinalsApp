@@ -12,7 +12,7 @@ import javax.inject.Provider;
  * instance provision of types served by {@code @Provides} methods.
  */
 public final class AndroidModule$$ModuleAdapter extends ModuleAdapter<AndroidModule> {
-  private static final String[] INJECTS = { "members/com.mobileappdevelopersclub.fapp.MainActivity", "members/com.mobileappdevelopersclub.fapp.FappApplication", "members/com.mobileappdevelopersclub.fapp.ui.ScheduleFragment", "members/com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment", "members/com.mobileappdevelopersclub.fapp.ui.LibraryListFragment", "members/com.mobileappdevelopersclub.fapp.ui.TweetsListFragment", };
+  private static final String[] INJECTS = { "members/com.mobileappdevelopersclub.fapp.MainActivity", "members/com.mobileappdevelopersclub.fapp.FappApplication", "members/com.mobileappdevelopersclub.fapp.ui.ScheduleFragment", "members/com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment", "members/com.mobileappdevelopersclub.fapp.ui.LibraryListFragment", "members/com.mobileappdevelopersclub.fapp.ui.TweetsListFragment", "members/com.mobileappdevelopersclub.fapp.transactions.MotivationalMessageService", };
   private static final Class<?>[] STATIC_INJECTIONS = { };
   private static final Class<?>[] INCLUDES = { };
 

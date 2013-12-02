@@ -1,3 +1,5 @@
+
+
 package com.mobileappdevelopersclub.fapp.models;
 
 import org.ektorp.support.CouchDbDocument;
@@ -32,8 +34,6 @@ public class ScheduleItem extends CouchDbDocument {
 		this.location = location;
 		this.instructor = instructor;
 		this.section = section;
-//		this.timeStart = ScheduleItemUtil.parseTime(START_FLAG, time);
-//		this.timeEnd = ScheduleItemUtil.parseTime(END_FLAG, time);
 		
 		
 	}

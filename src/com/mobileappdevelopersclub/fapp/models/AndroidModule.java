@@ -15,24 +15,19 @@
  */
 package com.mobileappdevelopersclub.fapp.models;
 
-import static android.content.Context.LOCATION_SERVICE;
 
 import java.io.IOException;
-
 import javax.inject.Singleton;
-
 import org.ektorp.CouchDbInstance;
 import org.ektorp.http.HttpClient;
 import org.ektorp.impl.StdCouchDbInstance;
-
 import android.content.Context;
-import android.location.LocationManager;
 import android.util.Log;
-
 import com.couchbase.cblite.CBLServer;
 import com.couchbase.cblite.ektorp.CBLiteHttpClient;
 import com.mobileappdevelopersclub.fapp.FappApplication;
 import com.mobileappdevelopersclub.fapp.MainActivity;
+import com.mobileappdevelopersclub.fapp.transactions.MotivationalMessageService;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
 import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
@@ -49,7 +44,8 @@ import dagger.Provides;
 @Module(
 		injects= { MainActivity.class, FappApplication.class, 
 					ScheduleFragment.class, FoodSpecialsFragment.class,
-					LibraryListFragment.class, TweetsListFragment.class } , 
+					LibraryListFragment.class, TweetsListFragment.class, 
+					MotivationalMessageService.class } , 
 		library = true
 		)
 

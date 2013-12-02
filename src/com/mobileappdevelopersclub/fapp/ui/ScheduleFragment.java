@@ -86,6 +86,8 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		userInfo = getActivity().getSharedPreferences(PREFS_NAME, 0);
 		mScheduleItems = new ArrayList<ScheduleItem>();
 		context = this;
+		generateTestClasses();
+		
 	}
 
 
@@ -209,27 +211,21 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		return todaysItems;
 	}
 
-//	private void generateTestClasses() {
-//
-//		ScheduleItem meeting = new ScheduleItem("Final 1", "10:00 am - 10:50 am", "Fri, Dec 20" , "CSI 1122" , "Agrawala", "0201");
-//
-//		ScheduleItem meeting1 = new ScheduleItem("Final 2", "11:00 am - 11:50 am", "Fri, Dec 20" , "CSI 1122" , "Agrawala", "0201");
-//
-//		ScheduleItem meeting2 = new ScheduleItem("Final 3", "12:00 pm - 12:50 pm", "Fri, Dec 20" , "CSI 1122" , "Agrawala", "0201");
-//
-//		ScheduleItem meeting3 = new ScheduleItem("Final 4", "1:00 pm - 1:50 pm", "Fri, Dec 20" , "CSI 1122" , "Agrawala", "0201");
-//
-//		mScheduleItems = new ArrayList<ScheduleItem>();
-//		mScheduleItems.add(meeting);
-//		mScheduleItems.add(meeting1);
-//		mScheduleItems.add(meeting2);
-//		mScheduleItems.add(meeting3);
-//
-//		for(int i =0 ; i < mScheduleItems.size(); i++){
-//			new CouchDbCommitTask().execute(mScheduleItems.get(i));
-//		}
-//
-//	}
+	private void generateTestClasses() {
+
+		ScheduleItem meeting = new ScheduleItem("It worked!",
+				"10:00 pm - 11:15 pm", 
+				"Sun, Dec 1" , "The Library" , 
+				"Testudo", "group study room");
+
+		mScheduleItems.add(meeting);
+		Constants.broadcastItems.add(meeting);
+
+		for(int i =0 ; i < mScheduleItems.size(); i++){
+			new CouchDbCommitTask().execute(mScheduleItems.get(i));
+		}
+
+	}
 
 	@Override
 	public void onNothingSelected(AdapterView<?> arg0) {
@@ -382,7 +378,6 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 		
 		@Override
 		protected void onPostExecute(ArrayList<ScheduleItem> result) {
-			// TODO Auto-generated method stub
 			addToScheduleItems(result);
 		}
 
@@ -407,10 +402,7 @@ public class ScheduleFragment extends FappFragment implements OnItemSelectedList
 	}
 	
 	private void addToScheduleItems(List<ScheduleItem> items) {
-		
-		for(int i = 0; i < items.size(); i++) {
-			mScheduleItems.add(items.get(i));
-		}
+		mScheduleItems.addAll(items);
 	}
 
 	private String buildFinalGetterUrl(String currentClass, String currentSection) {

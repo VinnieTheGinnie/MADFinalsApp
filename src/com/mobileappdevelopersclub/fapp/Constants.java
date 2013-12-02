@@ -1,7 +1,11 @@
 package com.mobileappdevelopersclub.fapp;
 
 
+import java.util.ArrayList;
+
 import android.content.Context;
+
+import com.mobileappdevelopersclub.fapp.models.ScheduleItem;
 
 
 public class Constants {
@@ -48,17 +52,19 @@ public class Constants {
 	public static final String[] UMDLIBS = {MCKELDIN, ART_LIB, ARCHITECTURE_LIB, 
 												CHEM_LIB, EPSL_LIB, HORNBAKE, MSPAL_LIB, SHADY_GROVE};
 	
-
+	
+	public static ArrayList<ScheduleItem> broadcastItems;
 	
 	public static void initConstants(Context context) {
 		
-		final float scale = context.getResources().getDimension(R.dimen.one_hour_increment);
+		final float scale = context.getResources().
+				getDimension(R.dimen.one_hour_increment);
 		//final float scale = 6;
 		pixelsPerHour = (int) (DPS * scale + 0.5f);
 		pixelsPerTenMin = pixelsPerHour / 6;
 		pixelsPerFifteenMin = pixelsPerHour / 4;
 		
-		
+		broadcastItems = new ArrayList<ScheduleItem>();
 	
 	}
 

@@ -27,7 +27,8 @@ public class FoodItemAdapter extends ArrayAdapter<FoodItem>{
 
 	@InjectView(R.id.resterauntImage) ImageView resterauntImage;
 	
-	public FoodItemAdapter(Context context, int resource, List<FoodItem> objects) {
+	public FoodItemAdapter(Context context, int resource,
+			List<FoodItem> objects) {
 		super(context, resource, objects);
 		this.context = context;
 		this.mFoodItems = objects;
@@ -55,9 +56,11 @@ public class FoodItemAdapter extends ArrayAdapter<FoodItem>{
 		Views.inject(this, convertView);
 
 		if(position % 2 == 0 ) {
-			Picasso.with(context).load(Constants.BAGEL_PLACE).into(resterauntImage);
+			Picasso.with(context).load(Constants.BAGEL_PLACE)
+			.into(resterauntImage);
 		} else {
-			Picasso.with(context).load(Constants.PIZZA_KINGDOM).into(resterauntImage);
+			Picasso.with(context).load(Constants.PIZZA_KINGDOM)
+			.into(resterauntImage);
 		}
 		
 		resterauntName.setText(mFoodItems.get(position).getResteraunt());
