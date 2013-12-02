@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.mobileappdevelopersclub.fapp.FappFragment;
@@ -50,6 +52,15 @@ public class FoodSpecialsFragment extends FappFragment {
 		mView = inflater.inflate(R.layout.list_layout, null);	
 		mList = (ListView) mView.findViewById(R.id.mList);
 		mList.setAdapter(mAdapter);
+		mList.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				
+			}
+			
+		});
 		
 		
 		return mView;

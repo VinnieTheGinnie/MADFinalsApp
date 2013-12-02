@@ -1,6 +1,9 @@
 package com.mobileappdevelopersclub.fapp;
 
-import android.content.Intent;
+import javax.inject.Inject;
+
+import org.ektorp.CouchDbInstance;
+
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -10,7 +13,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.couchbase.cblite.router.CBLURLStreamHandlerFactory;
 import com.mobileappdevelopersclub.fapp.adapters.MenuListAdapter;
@@ -39,6 +41,8 @@ public class MainActivity extends FappActivity {
 	FoodSpecialsFragment mFoodSpecialsFragment;
 	LibraryListFragment mLibraryListFragment;
 	TweetsListFragment mTweetsListFragment;
+	
+	@Inject CouchDbInstance dbInstance;
 
 
 	{
@@ -52,11 +56,10 @@ public class MainActivity extends FappActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.drawer_layout_main);
 		Constants.initConstants(this);
-		
+
 		//set broadcast receiver
-		// Uncomment this code to set up notifications 
-//		MotivationalMessageService bR = new MotivationalMessageService();
-//		bR.setAlarm(this);
+		MotivationalMessageService bR = new MotivationalMessageService();
+		bR.setAlarm(this);
 
 		mTitle = mDrawerTitle = "Fapp";
 		getActionBar().setTitle(mTitle);
