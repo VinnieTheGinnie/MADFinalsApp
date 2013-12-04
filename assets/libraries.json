@@ -1,0 +1,99 @@
+{ "libraries": [
+	{"name": "Mckeldin",
+	 "studyAreas":[],
+	 "photo":"http://www.gazette.net/storyimage/PN/20111216/NEWS/712169648/EP/1/7/EP-712169648.jpg",
+	 "hours":[
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	},
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	},
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	},
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	},
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	},
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	}
+	 ]
+	},
+	{"name": "Art",
+	 "studyAreas":[],
+	 "photo":"http://www.umd.edu/CampusMaps/pics/146.JPG",
+	 "hours":[
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	},
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	}
+	 ]
+	},
+	{"name": "Architecture",
+	 "studyAreas":[],
+	 "photo":"http://www.lib.umd.edu/binaries/content/gallery/public/architecturelibrary/arch-library.jpg",
+	 "hours":[
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	},
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	}
+	 ]
+	},
+	{"name": "Chemistry",
+	 "studyAreas":[],
+	 "photo":"http://www.chem.umd.edu/wp-content/uploads/2009/02/201022_274971239281872_483430466_o-704x3181.jpg",
+	 "hours":[
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	},
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	}
+	 ]
+	},
+	{"name": "Engineering and Physical Sciences",
+	 "studyAreas":[],
+	 "photo":"http://farm8.staticflickr.com/7381/8718560452_54c143cff4_z.jpg",
+	 "hours":[
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	},
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	}
+	 ]
+	},
+	{"name": "Hornbake",
+	 "studyAreas":[],
+	 "photo":"http://www.lib.umd.edu/blogs/special/wp-content/uploads/special/spring.jpg",
+	 "hours":[
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	},
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	}
+	 ]
+	},
+	{"name": "Michelle Smith Performing Arts",
+	 "studyAreas":[],
+	 "photo":"http://www.umd.edu/CampusMaps/pics/386-0.JPG",
+	 "hours":[
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	},
+	 	{ "hourOpen":"",
+	 	  "hourClose":""
+	 	}
+	 ]
+	}
+]
+}

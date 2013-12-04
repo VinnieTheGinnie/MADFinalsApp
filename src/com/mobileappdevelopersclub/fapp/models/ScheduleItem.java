@@ -19,6 +19,7 @@ public class ScheduleItem extends CouchDbDocument {
 	private String location;
 	private String instructor;
 	private String section;
+	private String desctiption;
 	
 	public ScheduleItem() {
 		//Stub
@@ -95,5 +96,17 @@ public class ScheduleItem extends CouchDbDocument {
 	public void setTime(String time) {
 		this.time = time;
 	}
+
+
+	public String getDesctiption() {
+		return desctiption;
+	}
+
+
+	public void setDesctiption(String desctiption) {
+		this.desctiption = desctiption;
+	}
+	
+	
 	
 }

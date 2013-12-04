@@ -17,7 +17,7 @@ import com.mobileappdevelopersclub.fapp.models.Hours;
 import com.mobileappdevelopersclub.fapp.models.Library;
 import com.squareup.picasso.Picasso;
 
-public class LibraryListItemAdapter extends ArrayAdapter<Library>{
+public class EventsListitemAdapter extends ArrayAdapter<Library>{
 	
 	private Context context;
 	private List<Library> mLibraries;
@@ -27,7 +27,7 @@ public class LibraryListItemAdapter extends ArrayAdapter<Library>{
 	@InjectView(R.id.libraryLocation) TextView libraryLocation;
 	@InjectView(R.id.libraryHours) TextView libraryHours;
 	
-	public LibraryListItemAdapter(Context context, int resource, List<Library> objects) {
+	public EventsListitemAdapter(Context context, int resource, List<Library> objects) {
 		super(context, resource, objects);
 		this.context = context;
 		this.mLibraries = objects;

@@ -58,8 +58,8 @@ public class MainActivity extends FappActivity {
 		Constants.initConstants(this);
 
 		//set broadcast receiver
-		MotivationalMessageService bR = new MotivationalMessageService();
-		bR.setAlarm(this);
+//		MotivationalMessageService bR = new MotivationalMessageService();
+//		bR.setAlarm(this);
 
 		mTitle = mDrawerTitle = "Fapp";
 		getActionBar().setTitle(mTitle);

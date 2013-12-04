@@ -5,51 +5,43 @@ import java.util.ArrayList;
 public class Library {
 
 	private String name;
-	private String location;
-	private String hourOpen;
-	private String hourClose;
+	private String photo;
 	private ArrayList<String> studyAreas;
+	private ArrayList<Hours> hours;
 	
-	public Library(String name, String location, String hourOpen,
-			String hourClose, ArrayList<String> studyAreas) {
+	public Library(String name, String photo, ArrayList<String> studyAreas,
+			ArrayList<Hours> hours) {
 		super();
 		this.name = name;
-		this.location = location;
-		this.hourOpen = hourOpen;
-		this.hourClose = hourClose;
+		this.photo = photo;
 		this.studyAreas = studyAreas;
+		this.hours = hours;
 	}
-	
-	
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getLocation() {
-		return location;
-	}
-	public void setLocation(String location) {
-		this.location = location;
-	}
-	public String getHourOpen() {
-		return hourOpen;
-	}
-	public void setHourOpen(String hourOpen) {
-		this.hourOpen = hourOpen;
-	}
-	public String getHourClose() {
-		return hourClose;
-	}
-	public void setHourClose(String hourClose) {
-		this.hourClose = hourClose;
-	}
 	public ArrayList<String> getStudyAreas() {
 		return studyAreas;
 	}
 	public void setStudyAreas(ArrayList<String> studyAreas) {
 		this.studyAreas = studyAreas;
+	}
+
+	public ArrayList<Hours> getHours() {
+		return hours;
+	}
+
+	public void setHours(ArrayList<Hours> hours) {
+		this.hours = hours;
+	}
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 	
 	

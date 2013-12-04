@@ -1,4 +1,5 @@
 package com.mobileappdevelopersclub.fapp.ui;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -15,11 +16,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
 import com.google.gson.Gson;
 import com.mobileappdevelopersclub.fapp.FappFragment;
@@ -28,15 +29,15 @@ import com.mobileappdevelopersclub.fapp.adapters.LibraryListItemAdapter;
 import com.mobileappdevelopersclub.fapp.models.Library;
 import com.mobileappdevelopersclub.fapp.models.LibraryResponse;
 
-public class LibraryListFragment extends FappFragment {
+public class EventsListFragment extends FappFragment {
 
 	private View mView;
 	private static Context context;
 	private ListView mList;
 	private LibraryListItemAdapter mAdapter;
 
-	public static LibraryListFragment newInstance() {
-		LibraryListFragment fragment = new LibraryListFragment();
+	public static EventsListFragment newInstance() {
+		EventsListFragment fragment = new EventsListFragment();
 		return fragment;
 	}
 
