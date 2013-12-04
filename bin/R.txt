@@ -18,6 +18,7 @@ int id className 0x7f090001
 int id classSection 0x7f090012
 int id classes 0x7f090020
 int id closes 0x7f090019
+int id currentDate 0x7f09001d
 int id date 0x7f090021
 int id dates 0x7f090016
 int id daysOfWeek 0x7f090027
@@ -36,7 +37,6 @@ int id lblDate 0x7f090004
 int id left_drawer 0x7f090009
 int id libraryHours 0x7f09001e
 int id libraryImage 0x7f09001b
-int id libraryLocation 0x7f09001d
 int id libraryName 0x7f09001c
 int id location 0x7f090023
 int id mList 0x7f09000d

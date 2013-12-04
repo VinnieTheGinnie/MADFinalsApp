@@ -2,12 +2,13 @@ package com.mobileappdevelopersclub.fapp.models;
 
 public class Hours {
 
-	
+	private String date;
 	private String hourOpen;
 	private String hourClose;
 	
-	public Hours(String hourOpen, String hourClose) {
+	public Hours(String date, String hourOpen, String hourClose) {
 		super();
+		this.date = date;
 		this.hourOpen = hourOpen;
 		this.hourClose = hourClose;
 	}
@@ -23,4 +24,11 @@ public class Hours {
 	public void setHourClose(String hourClose) {
 		this.hourClose = hourClose;
 	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	
 }

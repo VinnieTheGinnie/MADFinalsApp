@@ -61,7 +61,7 @@ public class MainActivity extends FappActivity {
 //		MotivationalMessageService bR = new MotivationalMessageService();
 //		bR.setAlarm(this);
 
-		mTitle = mDrawerTitle = "Fapp";
+		mTitle = mDrawerTitle = getResources().getString(R.string.app_name);
 		getActionBar().setTitle(mTitle);
 
 

@@ -3,23 +3,75 @@
 	 "studyAreas":[],
 	 "photo":"http://www.gazette.net/storyimage/PN/20111216/NEWS/712169648/EP/1/7/EP-712169648.jpg",
 	 "hours":[
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 8",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
 	 	},
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 9",
+	 	   "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
 	 	},
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 10",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
 	 	},
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 11",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
 	 	},
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 12",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
 	 	},
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 13",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 14",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 15",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 16",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 17",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 18",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 19",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 20",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"8:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 21",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"5:00 pm"
 	 	}
 	 ]
 	},
@@ -27,11 +79,75 @@
 	 "studyAreas":[],
 	 "photo":"http://www.umd.edu/CampusMaps/pics/146.JPG",
 	 "hours":[
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 8",
+	 	  "hourOpen":"1:00 pm",
+	 	  "hourClose":"10:00 pm"
 	 	},
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 9",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 10",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 11",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 12",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 13",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"6:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 14",
+	 	  "hourOpen":"1:00 pm",
+	 	  "hourClose":"6:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 15",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 16",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 17",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 18",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 19",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 20",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"8:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 21",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"5:00 pm"
 	 	}
 	 ]
 	},
@@ -39,11 +155,75 @@
 	 "studyAreas":[],
 	 "photo":"http://www.lib.umd.edu/binaries/content/gallery/public/architecturelibrary/arch-library.jpg",
 	 "hours":[
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 8",
+	 	  "hourOpen":"1:00 pm",
+	 	  "hourClose":"10:00 pm"
 	 	},
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 9",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 10",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 11",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 12",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 13",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"6:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 14",
+	 	  "hourOpen":"1:00 pm",
+	 	  "hourClose":"6:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 15",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 16",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 17",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 18",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 19",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 20",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"8:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 21",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"5:00 pm"
 	 	}
 	 ]
 	},
@@ -51,11 +231,75 @@
 	 "studyAreas":[],
 	 "photo":"http://www.chem.umd.edu/wp-content/uploads/2009/02/201022_274971239281872_483430466_o-704x3181.jpg",
 	 "hours":[
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 { 
+	 	  "date":"Dec 8",
+	 	  "hourOpen":"12:00 pm",
+	 	  "hourClose":"11:00 pm"
 	 	},
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 9",
+	 	   "hourOpen":"8:00 am",
+	 	  "hourClose":"11:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 10",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"11:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 11",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"11:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 12",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"11:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 13",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"8:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 14",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"8:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 15",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 16",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 17",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 18",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 19",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 20",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"8:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 21",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"5:00 pm"
 	 	}
 	 ]
 	},
@@ -63,11 +307,75 @@
 	 "studyAreas":[],
 	 "photo":"http://farm8.staticflickr.com/7381/8718560452_54c143cff4_z.jpg",
 	 "hours":[
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 8",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
 	 	},
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 9",
+	 	   "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 10",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 11",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 12",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 13",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 14",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 15",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 16",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 17",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 18",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 19",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 20",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"8:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 21",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"5:00 pm"
 	 	}
 	 ]
 	},
@@ -75,11 +383,75 @@
 	 "studyAreas":[],
 	 "photo":"http://www.lib.umd.edu/blogs/special/wp-content/uploads/special/spring.jpg",
 	 "hours":[
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 8",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
 	 	},
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 9",
+	 	   "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 10",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 11",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 12",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 13",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 14",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 15",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 16",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 17",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 18",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 19",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 20",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"8:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 21",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"5:00 pm"
 	 	}
 	 ]
 	},
@@ -87,11 +459,75 @@
 	 "studyAreas":[],
 	 "photo":"http://www.umd.edu/CampusMaps/pics/386-0.JPG",
 	 "hours":[
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 8",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
 	 	},
-	 	{ "hourOpen":"",
-	 	  "hourClose":""
+	 	{ 
+	 	  "date":"Dec 9",
+	 	   "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 10",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 11",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 12",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 13",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 14",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 15",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 16",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 17",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 18",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 19",
+	 	  "hourOpen":"12:00 am",
+	 	  "hourClose":"12:00 am"
+	 	},
+	 	{ 
+	 	  "date":"Dec 20",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"8:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 21",
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"5:00 pm"
 	 	}
 	 ]
 	}

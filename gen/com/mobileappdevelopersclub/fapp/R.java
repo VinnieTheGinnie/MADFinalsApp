@@ -48,6 +48,7 @@ public final class R {
         public static final int classSection=0x7f090012;
         public static final int classes=0x7f090020;
         public static final int closes=0x7f090019;
+        public static final int currentDate=0x7f09001d;
         public static final int date=0x7f090021;
         public static final int dates=0x7f090016;
         public static final int daysOfWeek=0x7f090027;
@@ -66,7 +67,6 @@ public final class R {
         public static final int left_drawer=0x7f090009;
         public static final int libraryHours=0x7f09001e;
         public static final int libraryImage=0x7f09001b;
-        public static final int libraryLocation=0x7f09001d;
         public static final int libraryName=0x7f09001c;
         public static final int location=0x7f090023;
         public static final int mList=0x7f09000d;

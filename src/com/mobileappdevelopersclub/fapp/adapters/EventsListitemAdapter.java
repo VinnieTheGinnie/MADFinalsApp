@@ -24,7 +24,7 @@ public class EventsListitemAdapter extends ArrayAdapter<Library>{
 	
 	@InjectView(R.id.libraryImage) ImageView libraryImage;
 	@InjectView(R.id.libraryName) TextView libraryName;
-	@InjectView(R.id.libraryLocation) TextView libraryLocation;
+	@InjectView(R.id.currentDate) TextView libraryLocation;
 	@InjectView(R.id.libraryHours) TextView libraryHours;
 	
 	public EventsListitemAdapter(Context context, int resource, List<Library> objects) {

@@ -10,7 +10,6 @@
         android:layout_width="0dip"
         android:layout_weight="0.6"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
         android:contentDescription="@null"
         android:adjustViewBounds="true" />
 
@@ -18,7 +17,6 @@
         android:layout_width="0dip"
         android:layout_weight="0.4"
         android:layout_height="match_parent"
-        android:layout_toRightOf="@+id/libraryImage"
         android:orientation="vertical" >
 
         <TextView
@@ -30,7 +28,7 @@
             android:paddingTop="10dp" />
 
         <TextView
-            android:id="@+id/libraryLocation"
+            android:id="@+id/currentDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="10dp"
