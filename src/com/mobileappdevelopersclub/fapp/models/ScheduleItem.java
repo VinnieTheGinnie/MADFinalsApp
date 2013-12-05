@@ -20,12 +20,15 @@ public class ScheduleItem extends CouchDbDocument {
 	private String instructor;
 	private String section;
 	private String desctiption;
+	private String type;
+	private String startTime;
+	private String endTime;
 	
 	public ScheduleItem() {
 		//Stub
 	}
 		
-	
+	//Constructor for Final schedule item
 	public ScheduleItem(String title, String time, String day,
 			String location, String instructor, String section) {
 		super();
@@ -35,8 +38,19 @@ public class ScheduleItem extends CouchDbDocument {
 		this.location = location;
 		this.instructor = instructor;
 		this.section = section;
-		
-		
+	}
+	
+	//constructor for Event schedule item
+	public ScheduleItem(String title, String day, String startTime, 
+			String endTime, String location, String description, String type) {
+		super();
+		this.title = title;
+		this.day = day;
+		this.startTime = startTime;
+		this.endTime = endTime;
+		this.location = location;
+		this.desctiption = description;
+		this.type = type;
 	}
 
 
@@ -55,7 +69,7 @@ public class ScheduleItem extends CouchDbDocument {
 	}
 
 
-	public void setDate(String day) {
+	public void setDay(String day) {
 		this.day = day;
 	}
 	
@@ -106,7 +120,30 @@ public class ScheduleItem extends CouchDbDocument {
 	public void setDesctiption(String desctiption) {
 		this.desctiption = desctiption;
 	}
-	
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getStartTime() {
+		return startTime;
+	}
+
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+
+	public String getEndTime() {
+		return endTime;
+	}
+
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
+	}
 	
 	
 }

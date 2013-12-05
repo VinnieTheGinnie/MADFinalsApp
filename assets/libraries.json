@@ -116,38 +116,38 @@
 	 	},
 	 	{ 
 	 	  "date":"Dec 15",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	   "hourOpen":"1:00 pm",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 16",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 17",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 18",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 19",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 20",
-	 	  "hourOpen":"8:00 am",
-	 	  "hourClose":"8:00 pm"
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"6:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 21",
-	 	  "hourOpen":"10:00 am",
-	 	  "hourClose":"5:00 pm"
+	 	  "hourOpen":"1:00 pm",
+	 	  "hourClose":"6:00 pm"
 	 	}
 	 ]
 	},
@@ -192,38 +192,38 @@
 	 	},
 	 	{ 
 	 	  "date":"Dec 15",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"1:00 pm",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 16",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 17",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 18",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 19",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 20",
-	 	  "hourOpen":"8:00 am",
-	 	  "hourClose":"8:00 pm"
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"6:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 21",
-	 	  "hourOpen":"10:00 am",
-	 	  "hourClose":"5:00 pm"
+	 	  "hourOpen":"1:00 pm",
+	 	  "hourClose":"6:00 pm"
 	 	}
 	 ]
 	},
@@ -268,28 +268,28 @@
 	 	},
 	 	{ 
 	 	  "date":"Dec 15",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"12:00 pm",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 16",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 17",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 18",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 19",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 20",
@@ -309,68 +309,68 @@
 	 "hours":[
 	 	{ 
 	 	  "date":"Dec 8",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"12:00 pm",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 9",
-	 	   "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	   "hourOpen":"8:00 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 10",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 11",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 12",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 13",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"2:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 14",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"10:00 am",
+	 	  "hourClose":"2:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 15",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"12:00 pm",
+	 	  "hourClose":"2:00 am"
 	 	},
 	 	{ 
 	 	  "date":"Dec 16",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"2:00 am"
 	 	},
 	 	{ 
 	 	  "date":"Dec 17",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"2:00 am"
 	 	},
 	 	{ 
 	 	  "date":"Dec 18",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"2:00 am"
 	 	},
 	 	{ 
 	 	  "date":"Dec 19",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"2:00 am"
 	 	},
 	 	{ 
 	 	  "date":"Dec 20",
 	 	  "hourOpen":"8:00 am",
-	 	  "hourClose":"8:00 pm"
+	 	  "hourClose":"2:00 am"
 	 	},
 	 	{ 
 	 	  "date":"Dec 21",
@@ -385,72 +385,72 @@
 	 "hours":[
 	 	{ 
 	 	  "date":"Dec 8",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"1:00 pm",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 9",
-	 	   "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	   "hourOpen":"8:00 am",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 10",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 11",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 12",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"10:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 13",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
-	 	},
-	 	{ 
-	 	  "date":"Dec 14",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
-	 	},
-	 	{ 
-	 	  "date":"Dec 15",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
-	 	},
-	 	{ 
-	 	  "date":"Dec 16",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
-	 	},
-	 	{ 
-	 	  "date":"Dec 17",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
-	 	},
-	 	{ 
-	 	  "date":"Dec 18",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
-	 	},
-	 	{ 
-	 	  "date":"Dec 19",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
-	 	},
-	 	{ 
-	 	  "date":"Dec 20",
 	 	  "hourOpen":"8:00 am",
 	 	  "hourClose":"8:00 pm"
 	 	},
 	 	{ 
+	 	  "date":"Dec 14",
+	 	  "hourOpen":"12:00 pm",
+	 	  "hourClose":"5:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 15",
+	 	  "hourOpen":"1:00 pm",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 16",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 17",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 18",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 19",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"10:00 pm"
+	 	},
+	 	{ 
+	 	  "date":"Dec 20",
+	 	  "hourOpen":"8:00 am",
+	 	  "hourClose":"6:00 pm"
+	 	},
+	 	{ 
 	 	  "date":"Dec 21",
-	 	  "hourOpen":"10:00 am",
+	 	  "hourOpen":"12:00 pm",
 	 	  "hourClose":"5:00 pm"
 	 	}
 	 ]
@@ -461,72 +461,72 @@
 	 "hours":[
 	 	{ 
 	 	  "date":"Dec 8",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"1:00 pm",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 9",
-	 	   "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	   "hourOpen":"8:30 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 10",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:30 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 11",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:30 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 12",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:30 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 13",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:30 am",
+	 	  "hourClose":"6:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 14",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"12:00 pm",
+	 	  "hourClose":"5:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 15",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"1:00 pm",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 16",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:30 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 17",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:30 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 18",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:30 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 19",
-	 	  "hourOpen":"12:00 am",
-	 	  "hourClose":"12:00 am"
+	 	  "hourOpen":"8:30 am",
+	 	  "hourClose":"11:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 20",
-	 	  "hourOpen":"8:00 am",
-	 	  "hourClose":"8:00 pm"
+	 	  "hourOpen":"8:30 am",
+	 	  "hourClose":"6:00 pm"
 	 	},
 	 	{ 
 	 	  "date":"Dec 21",
-	 	  "hourOpen":"10:00 am",
+	 	  "hourOpen":"12:00 pm",
 	 	  "hourClose":"5:00 pm"
 	 	}
 	 ]

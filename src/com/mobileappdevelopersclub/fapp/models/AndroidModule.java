@@ -28,6 +28,7 @@ import com.couchbase.cblite.ektorp.CBLiteHttpClient;
 import com.mobileappdevelopersclub.fapp.FappApplication;
 import com.mobileappdevelopersclub.fapp.MainActivity;
 import com.mobileappdevelopersclub.fapp.transactions.MotivationalMessageService;
+import com.mobileappdevelopersclub.fapp.ui.EventsListFragment;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
 import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
@@ -45,7 +46,7 @@ import dagger.Provides;
 		injects= { MainActivity.class, FappApplication.class, 
 					ScheduleFragment.class, FoodSpecialsFragment.class,
 					LibraryListFragment.class, TweetsListFragment.class, 
-					MotivationalMessageService.class } , 
+					MotivationalMessageService.class, EventsListFragment.class } , 
 		library = true
 		)
 

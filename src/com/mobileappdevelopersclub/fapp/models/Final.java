@@ -1,7 +1,5 @@
 package com.mobileappdevelopersclub.fapp.models;
 
-import com.google.gson.annotations.SerializedName;
-
 public class Final extends ScheduleItem {
 	
 	//Sample JSON array of finals 

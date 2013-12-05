@@ -1,42 +1,39 @@
 package com.mobileappdevelopersclub.fapp.adapters;
 
-import java.util.Calendar;
 import java.util.List;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 import butterknife.InjectView;
 import butterknife.Views;
 
 import com.mobileappdevelopersclub.fapp.R;
-import com.mobileappdevelopersclub.fapp.models.Hours;
-import com.mobileappdevelopersclub.fapp.models.Library;
-import com.squareup.picasso.Picasso;
+import com.mobileappdevelopersclub.fapp.models.Event;
 
-public class EventsListitemAdapter extends ArrayAdapter<Library>{
+public class EventsListitemAdapter extends ArrayAdapter<Event>{
 	
 	private Context context;
-	private List<Library> mLibraries;
+	private List<Event> mEvents;
 	
-	@InjectView(R.id.libraryImage) ImageView libraryImage;
-	@InjectView(R.id.libraryName) TextView libraryName;
-	@InjectView(R.id.currentDate) TextView libraryLocation;
-	@InjectView(R.id.libraryHours) TextView libraryHours;
+	@InjectView(R.id.title) TextView title;
+	@InjectView(R.id.dayAndTime) TextView dayAndTime;
+	@InjectView(R.id.location) TextView location;
+	@InjectView(R.id.description) TextView description;
 	
-	public EventsListitemAdapter(Context context, int resource, List<Library> objects) {
+	public EventsListitemAdapter(Context context, int resource,
+			List<Event> objects) {
 		super(context, resource, objects);
 		this.context = context;
-		this.mLibraries = objects;
+		this.mEvents = objects;
 	}
 
 
 	@Override
 	public int getCount() {
-		return mLibraries == null ? 0 : mLibraries.size();
+		return mEvents == null ? 0 : mEvents.size();
 	}
 	
 
@@ -46,40 +43,29 @@ public class EventsListitemAdapter extends ArrayAdapter<Library>{
 		
 	
 		if(convertView == null) {
-			convertView = View.inflate(context, R.layout.library_list_item, null);
+			convertView = View.inflate(context, R.layout.events_list_item, null);
 		} 
 		
 		//Inject views (See android butterknife)
 		Views.inject(this, convertView);
 		
-		Library currLib = mLibraries.get(position);		
+		Event currEvent = mEvents.get(position);
 		
-		libraryName.setText(currLib.getName());
-		Picasso.with(context).load(currLib.getPhoto()).into(libraryImage);
+		title.setText(currEvent.getTitle());
 		
-		Calendar c = Calendar.getInstance();
-		int day = c.get(Calendar.DAY_OF_MONTH);
+		StringBuilder dayTimeBuilder = new StringBuilder();
 		
+		dayTimeBuilder.append(currEvent.getDay());
+		dayTimeBuilder.append("  ");
+		dayTimeBuilder.append(currEvent.getStartTime());
+		dayTimeBuilder.append(" - ");
+		dayTimeBuilder.append(currEvent.getEndTime());
 		
-		//TODO: change for production 
-//		int hoursPosition = 0;
-//		
-//		for(int i=9; i < 22;i++) {
-//			if(day == i) {
-//				break;
-//			} 
-//			
-//			++hoursPosition;
-//		}
-//		Hours hours = currLib.getHours().get(hoursPosition);
+		dayAndTime.setText(dayTimeBuilder.toString());
 		
+		location.setText(currEvent.getLocation());
 		
-		
-		Hours hours = currLib.getHours().get(0);
-		String formattedLibHours = hours.getHourOpen() + 
-				" - " + hours.getHourClose();
-		
-		libraryHours.setText(formattedLibHours);
+		description.setText(currEvent.getDesctiption());
 		
 		return convertView;
 	}

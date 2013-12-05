@@ -32,6 +32,7 @@ public class Constants {
 	//NavigationDrawer Option Constants (positions in array)
 	public static final int SCHEDULE_OPTION = 0;
 	public static final int FOOD_OPTION = 1;
+	public static final int EVENTS_OPTION = 2;
 	public static final int LIBRARY_OPTION = 3;
 	public static final int TWEETS_OPTION = 5;
 	

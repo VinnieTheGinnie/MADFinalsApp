@@ -27,7 +27,8 @@ public class LibraryListItemAdapter extends ArrayAdapter<Library>{
 	@InjectView(R.id.currentDate) TextView currentDate;
 	@InjectView(R.id.libraryHours) TextView libraryHours;
 
-	public LibraryListItemAdapter(Context context, int resource, List<Library> objects) {
+	public LibraryListItemAdapter(Context context, int resource,
+			List<Library> objects) {
 		super(context, resource, objects);
 		this.context = context;
 		this.mLibraries = objects;

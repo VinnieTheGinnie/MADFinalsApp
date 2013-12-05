@@ -3,38 +3,40 @@ package com.mobileappdevelopersclub.fapp.ui;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
-
+import com.mobileappdevelopersclub.fapp.models.Event;
 import com.google.gson.Gson;
 import com.mobileappdevelopersclub.fapp.FappFragment;
 import com.mobileappdevelopersclub.fapp.R;
-import com.mobileappdevelopersclub.fapp.adapters.LibraryListItemAdapter;
+import com.mobileappdevelopersclub.fapp.adapters.EventsListitemAdapter;
+import com.mobileappdevelopersclub.fapp.models.EventResponse;
 import com.mobileappdevelopersclub.fapp.models.Library;
-import com.mobileappdevelopersclub.fapp.models.LibraryResponse;
+import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment.EnterClassDialogFragment;
 
 public class EventsListFragment extends FappFragment {
 
 	private View mView;
 	private static Context context;
 	private ListView mList;
-	private LibraryListItemAdapter mAdapter;
+	private EventsListitemAdapter mAdapter;
 
 	public static EventsListFragment newInstance() {
 		EventsListFragment fragment = new EventsListFragment();
@@ -56,54 +58,53 @@ public class EventsListFragment extends FappFragment {
 
 		mView = inflater.inflate(R.layout.list_layout , null);
 
-		mAdapter = new LibraryListItemAdapter(getActivity(), 0,
-				new ArrayList<Library>());	
+		mAdapter = new EventsListitemAdapter(getActivity(), 0,
+				new ArrayList<Event>());	
 		mList = (ListView) mView.findViewById(R.id.mList);
 		mList.setAdapter(mAdapter);
+		mList.setDividerHeight(1);
 		mList.setOnItemClickListener(new OnItemClickListener(){
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int pos,
 					long arg3) {
-				showLibraryHoursDialog(mAdapter.getItem(pos));
+				showAddToSchedDialog(mAdapter.getItem(pos));
 
 			}
 
 		});
 
-		fetchLibraryData();
+		fetchEventData();
 
 		//		createTestLibraries();
 
 		return mView;
 	}
 
-	private void showLibraryHoursDialog(Library lib) {
-		
-		LibraryHoursDialogFragment.newInstance(lib)
-		.show(getFragmentManager(), "Showing Hours");
-		
+	private void showAddToSchedDialog(Event e) {
+		new AddToScheduleDialogFragment().show(getFragmentManager(), 
+				"Add To Schedule Dialog Showing");
 	}
 
-	private void fetchLibraryData() {
+	private void fetchEventData() {
 
 		Gson gson = new Gson();
 		String json = null;
 		try {
-			json = parseAsString("libraries.json");
+			json = parseAsString("events_list.json");
 		} catch (IOException e) {
 			Toast.makeText(this.getActivity(), 
 					"Could not parse JSON to String", Toast.LENGTH_SHORT).show();
 		}
 
-		LibraryResponse response = gson.fromJson(json, LibraryResponse.class);
+		EventResponse response = gson.fromJson(json, EventResponse.class);
 
-		addToLibraryList(response.getLibraries());
+		addToEventsList(response.getEvents());
 	}
 
-	private void addToLibraryList(List<Library> libraries) {
+	private void addToEventsList(List<Event> events) {
 
-		mAdapter.addAll(libraries);
+		mAdapter.addAll(events);
 		mAdapter.notifyDataSetChanged();
 
 	}
@@ -127,54 +128,39 @@ public class EventsListFragment extends FappFragment {
 
 	}
 
-	public static class LibraryHoursDialogFragment extends DialogFragment {
-
-		Library lib;
-		
-		public static LibraryHoursDialogFragment newInstance(Library lib) {
-			LibraryHoursDialogFragment dialog = new LibraryHoursDialogFragment();
-			dialog.lib = lib;
-			return dialog;
-		}
-		
+	@SuppressLint("ValidFragment")
+	public class AddToScheduleDialogFragment extends DialogFragment {
 
 		@Override
 		public Dialog onCreateDialog(Bundle savedInstanceState) {
-			AlertDialog.Builder builder = 
+			AlertDialog.Builder builder =
 					new AlertDialog.Builder(getActivity());
 			// Get the layout inflater
 			LayoutInflater inflater = getActivity().getLayoutInflater();
 
-			View view = inflater.inflate(R.layout.library_hours_dialog, null);
+			final View view = inflater.inflate(R.layout.add_class_dialog,
+					null);
 			
-			((TextView) view.findViewById(R.id.title)).setText(lib.getName());
-			
-			Calendar c = Calendar.getInstance();
-			int day = c.get(Calendar.DAY_OF_MONTH);
-			int dayMax = 14;
-			int dayMin = 8;
-			
-			if(day > 14) {
-				dayMin = 15;
-				dayMax = 21;
-			}
-			
-			LinearLayout dates = (LinearLayout) view.findViewById(R.id.dates);
-			
-			for(int i = dayMin; i <= dayMax; i++) {
-				TextView t = new TextView(context);
-				t.setText(Integer.toString(i));
-				dates.addView(t);
-			}
-			
-			
-			
+			((TextView)view.findViewById(R.id.Title)).setText(context.getResources().getString(R.string.add_to_sched));
+			((EditText)view.findViewById(R.id.className)).setVisibility(View.INVISIBLE);
 
 			// Inflate and set the layout for the dialog
 			// Pass null as the parent view because its going in the dialog layout
-			builder.setView(view);
-
-
+			builder.setView(view)
+			// Add action buttons
+			.setPositiveButton(R.string.yes, 
+					new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int id) {
+					//TODO: save schedule item
+				}
+			})
+			.setNegativeButton(R.string.no,
+					new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int id) {
+					AddToScheduleDialogFragment.this.getDialog().cancel();
+				}
+			});      
 			return builder.create();
 		}
 
