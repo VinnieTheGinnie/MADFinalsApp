@@ -108,6 +108,10 @@ public class ScheduleItemUtil {
 		
 		return timeInPixels;
 	}
+	
+	public static String parseHourDateString(String date) {
+		return date.substring(date.length() - 2).replace(" ", "");
+	}
 
 	
 }

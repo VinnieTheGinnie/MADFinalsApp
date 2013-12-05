@@ -10,12 +10,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+    
+    <TextView
+        android:id="@+id/emptyDateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:text="            " />
 
     <LinearLayout
         android:id="@+id/dates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/emptyDateTitle"
         android:orientation="horizontal"
         android:paddingTop="2dp" >
     </LinearLayout>
@@ -24,7 +32,7 @@
         android:id="@+id/opens"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
+        android:layout_below="@+id/emptyDateTitle"
         android:text="Opens: " />
 
     <LinearLayout

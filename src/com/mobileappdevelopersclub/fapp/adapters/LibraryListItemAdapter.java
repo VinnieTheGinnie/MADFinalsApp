@@ -15,6 +15,7 @@ import butterknife.Views;
 import com.mobileappdevelopersclub.fapp.R;
 import com.mobileappdevelopersclub.fapp.models.Hours;
 import com.mobileappdevelopersclub.fapp.models.Library;
+import com.mobileappdevelopersclub.fapp.util.ScheduleItemUtil;
 import com.squareup.picasso.Picasso;
 
 public class LibraryListItemAdapter extends ArrayAdapter<Library>{
@@ -66,7 +67,7 @@ public class LibraryListItemAdapter extends ArrayAdapter<Library>{
 		List<Hours> hrsList = currLib.getHours();
 
 		for(int i=0; i < hrsList.size(); i++) {
-			String date = parseDateString(hrsList.get(i).getDate());
+			String date = ScheduleItemUtil.parseHourDateString(hrsList.get(i).getDate());
 			if(date.equalsIgnoreCase(Integer.toString(day))) {
 				hourInd = i;
 				break;
@@ -92,9 +93,4 @@ public class LibraryListItemAdapter extends ArrayAdapter<Library>{
 
 		return convertView;
 	}
-
-	private String parseDateString(String date) {
-		return date.substring(date.length() - 2).replace(" ", "");
-	}
-
 }

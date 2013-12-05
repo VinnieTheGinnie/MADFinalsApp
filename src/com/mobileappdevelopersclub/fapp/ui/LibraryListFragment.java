@@ -25,6 +25,7 @@ import com.google.gson.Gson;
 import com.mobileappdevelopersclub.fapp.FappFragment;
 import com.mobileappdevelopersclub.fapp.R;
 import com.mobileappdevelopersclub.fapp.adapters.LibraryListItemAdapter;
+import com.mobileappdevelopersclub.fapp.models.Hours;
 import com.mobileappdevelopersclub.fapp.models.Library;
 import com.mobileappdevelopersclub.fapp.models.LibraryResponse;
 
@@ -64,7 +65,8 @@ public class LibraryListFragment extends FappFragment {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int pos,
 					long arg3) {
-				showLibraryHoursDialog(mAdapter.getItem(pos));
+				//TODO: make this dialog work better, deprecated for now
+//				showLibraryHoursDialog(mAdapter.getItem(pos));
 
 			}
 
@@ -152,18 +154,39 @@ public class LibraryListFragment extends FappFragment {
 			int day = c.get(Calendar.DAY_OF_MONTH);
 			int dayMax = 14;
 			int dayMin = 8;
+			int hourInd = 0;
 			
 			if(day > 14) {
 				dayMin = 15;
 				dayMax = 21;
+				hourInd = 7;
 			}
 			
 			LinearLayout dates = (LinearLayout) view.findViewById(R.id.dates);
+			LinearLayout opens = 
+					(LinearLayout)view.findViewById(R.id.hourOpen);
+			LinearLayout closes = 
+					(LinearLayout)view.findViewById(R.id.hourClose);
+			
+			List<Hours> hours = lib.getHours();
+			
+			
 			
 			for(int i = dayMin; i <= dayMax; i++) {
 				TextView t = new TextView(context);
-				t.setText(Integer.toString(i));
+				t.setText(Integer.toString(i)+ "  ");
 				dates.addView(t);
+				
+				Hours currHour = hours.get(hourInd);
+				
+				TextView open = new TextView(context);
+				open.setText(currHour.getHourOpen()+ "  ");
+				opens.addView(open);
+				
+				TextView close = new TextView(context);
+				close.setText(currHour.getHourClose() + "  ");
+				closes.addView(close);
+				
 			}
 			
 			
