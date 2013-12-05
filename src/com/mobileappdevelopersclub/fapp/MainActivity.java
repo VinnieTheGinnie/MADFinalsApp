@@ -17,6 +17,7 @@ import android.widget.ListView;
 import com.couchbase.cblite.router.CBLURLStreamHandlerFactory;
 import com.mobileappdevelopersclub.fapp.adapters.MenuListAdapter;
 import com.mobileappdevelopersclub.fapp.transactions.MotivationalMessageService;
+import com.mobileappdevelopersclub.fapp.ui.EventsListFragment;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
 import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
@@ -41,6 +42,7 @@ public class MainActivity extends FappActivity {
 	FoodSpecialsFragment mFoodSpecialsFragment;
 	LibraryListFragment mLibraryListFragment;
 	TweetsListFragment mTweetsListFragment;
+	EventsListFragment mEventsListFragment;
 	
 	@Inject CouchDbInstance dbInstance;
 
@@ -61,7 +63,7 @@ public class MainActivity extends FappActivity {
 //		MotivationalMessageService bR = new MotivationalMessageService();
 //		bR.setAlarm(this);
 
-		mTitle = mDrawerTitle = "Fapp";
+		mTitle = mDrawerTitle = getResources().getString(R.string.app_name);
 		getActionBar().setTitle(mTitle);
 
 
@@ -147,7 +149,14 @@ public class MainActivity extends FappActivity {
 			getFragmentManager().beginTransaction().replace(R.id.main_frame, mFoodSpecialsFragment).commit();
 			mDrawerList.setItemChecked(position, false);
 			mDrawerLayout.closeDrawer(mDrawerList);
-		} else if (position == Constants.LIBRARY_OPTION ){
+		} else if (position == Constants.EVENTS_OPTION) { 
+		
+			mEventsListFragment = EventsListFragment.newInstance();
+			getFragmentManager().beginTransaction().replace(R.id.main_frame, mEventsListFragment).commit();
+			mDrawerList.setItemChecked(position, false);
+			mDrawerLayout.closeDrawer(mDrawerList);
+
+		}else if (position == Constants.LIBRARY_OPTION ){
 
 			mLibraryListFragment = LibraryListFragment.newInstance();
 			getFragmentManager().beginTransaction().replace(R.id.main_frame, mLibraryListFragment).commit();

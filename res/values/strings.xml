@@ -10,6 +10,9 @@
 	<string name="class_name_hint">Class Name, ex "CMSC411"</string>
 	<string name="class_section_hint">Section</string>
 	<string name="add_class">Search Class</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	<string name="add_to_sched">Add to Schedule?</string>
 	<string name="cancel">Cancel</string>
 	
 	<!--	TWITTER APP/ACCOUNT INFO

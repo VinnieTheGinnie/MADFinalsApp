@@ -1,0 +1,246 @@
+{ "events" : [
+  {
+    "title":"Fun with MICA!",
+    "day":"9-Dec",
+    "startTime":"8:30",
+    "endTime":"17:00",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":"Coloring isn’t just for kids! Drop in and color a turtle while enjoying tea, coffee, or hot cocoa. Also, stop in and create an art or jewelry piece that is representative of your identity or a social cause.      ",
+    "type":"Event"
+  },
+  {
+    "title":"Mousepad Makeover ",
+    "day":"9-Dec",
+    "startTime":"11:00",
+    "endTime":"14:00",
+    "location":"Art and Learning Center – B0107 Stamp",
+    "description":"Come paint and decorate a mousepad to use for your computer",
+    "type":"Event"
+  },
+  {
+    "title":"Fun with MICA!",
+    "day":"10-Dec",
+    "startTime":"8:30",
+    "endTime":"17:00",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":"Coloring isn’t just for kids! Drop in and color a turtle while enjoying tea, coffee, or hot cocoa. Also, stop in and create an art or jewelry piece that is representative of your identity or a social cause.      ",
+    "type":"Event"
+  },
+  {
+    "title":"Game Hour",
+    "day":"11-Dec",
+    "startTime":"15:00",
+    "endTime":"16:00",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":"Take a break and join MICA staff for fun games",
+    "type":"Event"
+  },
+  {
+    "title":"Despicable Me 2 Screening hosted by SEE",
+    "day":"12-Dec",
+    "startTime":"19:00",
+    "endTime":"21:00",
+    "location":"Hoff Theater",
+    "description":"SO FLUFFY!",
+    "type":"Event"
+  },
+  {
+    "title":"Fun with MICA!",
+    "day":"11-Dec",
+    "startTime":"8:30",
+    "endTime":"17:00",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":"Coloring isn’t just for kids! Drop in and color a turtle while enjoying tea, coffee, or hot cocoa. Also, stop in and create an art or jewelry piece that is representative of your identity or a social cause.      ",
+    "type":"Event"
+  },
+  {
+    "title":"Despicable Me 2 Screening hosted by SEE",
+    "day":"11-Dec",
+    "startTime":"19:00",
+    "endTime":"21:00",
+    "location":"Hoff Theater",
+    "description":"SO FLUFFY!",
+    "type":"Event"
+  },
+  {
+    "title":"Fun with MICA!",
+    "day":"12-Dec",
+    "startTime":"8:30",
+    "endTime":"17:00",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":"Coloring isn’t just for kids! Drop in and color a turtle while enjoying tea, coffee, or hot cocoa. Also, stop in and create an art or jewelry piece that is representative of your identity or a social cause.      ",
+    "type":"Event"
+  },
+  {
+    "title":"Game Hour",
+    "day":"12-Dec",
+    "startTime":"15:00",
+    "endTime":"16:00",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":"Take a break and join MICA staff for fun games",
+    "type":"Event"
+  },
+  {
+    "title":"Relaxation Activities  ",
+    "day":"12-Dec",
+    "startTime":"9:00",
+    "endTime":"16:00",
+    "location":"Graduate Student Life Suite  – 0121 Stamp",
+    "description":"Enjoy FREE light breakfast, chair massages, playtime (legos and playdough!), hot drinks, snacks, and giveaways at the GradTerp Fall Study Break!",
+    "type":"Event"
+  },
+  {
+    "title":"Make your own Trail Mix",
+    "day":"13-Dec",
+    "startTime":"11:00",
+    "endTime":"",
+    "location":"Main Lobby – Stamp",
+    "description":"Come make your own mix of a tasty study snack!",
+    "type":"Event"
+  },
+  {
+    "title":"Yoga",
+    "day":"15-Dec",
+    "startTime":"19:30",
+    "endTime":"",
+    "location":"Activities Room (next to the TerpZone) – Stamp",
+    "description":"Come relax your mind and your muscles with a calming session of yoga lead by an instructor from the Campus Recreation Services. ",
+    "type":"Event"
+  },
+  {
+    "title":"Open Study Rooms",
+    "day":"16-Dec",
+    "startTime":"7:00",
+    "endTime":"0:00",
+    "location":"Atrium and Prince George’s Room – Stamp",
+    "description":"Study in Stamp during Stamp's hours of operation!",
+    "type":"Event"
+  },
+  {
+    "title":"Fun with MICA!",
+    "day":"16-Dec",
+    "startTime":"8:30",
+    "endTime":"17:00",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":"Coloring isn’t just for kids! Drop in and color a turtle while enjoying tea, coffee, or hot cocoa. Also, stop in and create an art or jewelry piece that is representative of your identity or a social cause.      ",
+    "type":"Event"
+  },
+  {
+    "title":"Free Massages",
+    "day":"16-Dec",
+    "startTime":"11:00",
+    "endTime":"14:00",
+    "location":"Grand Ballroom Lounge –  1209 Stamp",
+    "description":"",
+    "type":"Event"
+  },
+  {
+    "title":"Open Study Rooms",
+    "day":"17-Dec",
+    "startTime":"7:00",
+    "endTime":"0:00",
+    "location":"Atrium and Prince George’s Room – Stamp",
+    "description":"Study in Stamp during Stamp's hours of operation!",
+    "type":"Event"
+  },
+  {
+    "title":"Fun with MICA!",
+    "day":"17-Dec",
+    "startTime":"8:30",
+    "endTime":"17:00",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":"Coloring isn’t just for kids! Drop in and color a turtle while enjoying tea, coffee, or hot cocoa. Also, stop in and create an art or jewelry piece that is representative of your identity or a social cause.      ",
+    "type":"Event"
+  },
+  {
+    "title":"Cookie Decorating",
+    "day":"17-Dec",
+    "startTime":"11:00",
+    "endTime":"",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":" Icing or sprinkles? Why not both! Join us to decorate a cookie to snack on while you study.",
+    "type":"Event"
+  },
+  {
+    "title":"National Maple Syrup Day Celebration!",
+    "day":"17-Dec",
+    "startTime":"10:00",
+    "endTime":"",
+    "location":"Grand Ballroom Lounge –  1209 Stamp",
+    "description":"",
+    "type":"Event"
+  },
+  {
+    "title":"Open Study Rooms",
+    "day":"18-Dec",
+    "startTime":"7:00",
+    "endTime":"0:00",
+    "location":"Atrium and Prince George’s Room – Stamp",
+    "description":"Study in Stamp during Stamp's hours of operation!",
+    "type":"Event"
+  },
+  {
+    "title":"Fun with MICA!",
+    "day":"18-Dec",
+    "startTime":"8:30",
+    "endTime":"17:00",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":"Coloring isn’t just for kids! Drop in and color a turtle while enjoying tea, coffee, or hot cocoa. Also, stop in and create an art or jewelry piece that is representative of your identity or a social cause.      ",
+    "type":"Event"
+  },
+  {
+    "title":"Game Hour",
+    "day":"18-Dec",
+    "startTime":"15:00",
+    "endTime":"16:00",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":"Take a break and join MICA staff for fun games",
+    "type":"Event"
+  },
+  {
+    "title":"Muffins and Fruit",
+    "day":"18-Dec",
+    "startTime":"10:30",
+    "endTime":"",
+    "location":"Prince George's Room –  Stamp",
+    "description":"Come enjoy a light breakfast to jumpstart your studying.",
+    "type":"Event"
+  },
+  {
+    "title":"Open Study Rooms",
+    "day":"19-Dec",
+    "startTime":"7:00",
+    "endTime":"0:00",
+    "location":"Atrium and Prince George’s Room – Stamp",
+    "description":"Study in Stamp during Stamp's hours of operation!",
+    "type":"Event"
+  },
+  {
+    "title":"Fun with MICA!",
+    "day":"19-Dec",
+    "startTime":"8:30",
+    "endTime":"17:00",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":"Coloring isn’t just for kids! Drop in and color a turtle while enjoying tea, coffee, or hot cocoa. Also, stop in and create an art or jewelry piece that is representative of your identity or a social cause.      ",
+    "type":"Event"
+  },
+  {
+    "title":"Open Study Rooms",
+    "day":"20-Dec",
+    "startTime":"7:00",
+    "endTime":"0:00",
+    "location":"Atrium and Prince George’s Room – Stamp",
+    "description":"Study in Stamp during Stamp's hours of operation!",
+    "type":"Event"
+  },
+  {
+    "title":"Fun with MICA!",
+    "day":"20-Dec",
+    "startTime":"8:30",
+    "endTime":"17:00",
+    "location":"MICA Lounge – 1120 Stamp",
+    "description":"Coloring isn’t just for kids! Drop in and color a turtle while enjoying tea, coffee, or hot cocoa. Also, stop in and create an art or jewelry piece that is representative of your identity or a social cause.      ",
+    "type":"Event"
+  }
+]
+}
