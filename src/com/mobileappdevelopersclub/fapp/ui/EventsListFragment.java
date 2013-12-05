@@ -5,6 +5,11 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
+import org.ektorp.CouchDbConnector;
+import org.ektorp.CouchDbInstance;
+
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -12,6 +17,7 @@ import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.AssetManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,14 +28,17 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.mobileappdevelopersclub.fapp.models.Event;
+
 import com.google.gson.Gson;
+import com.mobileappdevelopersclub.fapp.Constants;
 import com.mobileappdevelopersclub.fapp.FappFragment;
 import com.mobileappdevelopersclub.fapp.R;
 import com.mobileappdevelopersclub.fapp.adapters.EventsListitemAdapter;
+import com.mobileappdevelopersclub.fapp.models.Event;
 import com.mobileappdevelopersclub.fapp.models.EventResponse;
-import com.mobileappdevelopersclub.fapp.models.Library;
-import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment.EnterClassDialogFragment;
+import com.mobileappdevelopersclub.fapp.models.ScheduleItem;
+import com.mobileappdevelopersclub.fapp.models.ScheduleItemRepository;
+
 
 public class EventsListFragment extends FappFragment {
 
@@ -37,6 +46,8 @@ public class EventsListFragment extends FappFragment {
 	private static Context context;
 	private ListView mList;
 	private EventsListitemAdapter mAdapter;
+	
+	@Inject CouchDbInstance dbInstance;
 
 	public static EventsListFragment newInstance() {
 		EventsListFragment fragment = new EventsListFragment();
@@ -76,8 +87,6 @@ public class EventsListFragment extends FappFragment {
 
 		fetchEventData();
 
-		//		createTestLibraries();
-
 		return mView;
 	}
 
@@ -106,6 +115,39 @@ public class EventsListFragment extends FappFragment {
 
 		mAdapter.addAll(events);
 		mAdapter.notifyDataSetChanged();
+
+	}
+	
+	private class CouchDbCommitTask extends AsyncTask<ScheduleItem, Void, Void> {
+
+		public CouchDbCommitTask() {
+
+		}
+
+		@Override
+		protected Void doInBackground(ScheduleItem... arg0) {
+			commitItem(arg0[0]);
+			return null;
+		}
+
+
+		private void commitItem(ScheduleItem item) {
+
+			CouchDbConnector couchDbConnector = dbInstance.createConnector(Constants.DATABASE_NAME, true);
+			ScheduleItemRepository repo = new ScheduleItemRepository(couchDbConnector);
+			boolean exists = false;
+
+			for(ScheduleItem curr: repo.getAll()) {
+				if(curr.getTitle().equals(item.getTime())) {
+					exists = true;
+				}
+			}
+
+			if(!exists) {
+				repo.add((ScheduleItem)item);
+			}
+
+		}
 
 	}
 
