@@ -21,12 +21,12 @@ public class FoodItemAdapter extends ArrayAdapter<FoodItem>{
 	private Context context;
 	private List<FoodItem> mFoodItems;
 
-//
+	//
 	@InjectView(R.id.resterauntName) TextView resterauntName;
 	@InjectView(R.id.resterauntSpecial) TextView resterauntSpecial;
 
 	@InjectView(R.id.resterauntImage) ImageView resterauntImage;
-	
+
 	public FoodItemAdapter(Context context, int resource,
 			List<FoodItem> objects) {
 		super(context, resource, objects);
@@ -54,17 +54,14 @@ public class FoodItemAdapter extends ArrayAdapter<FoodItem>{
 
 		//Inject views (See android butterknife)
 		Views.inject(this, convertView);
-
-		if(position % 2 == 0 ) {
-			Picasso.with(context).load(Constants.BAGEL_PLACE)
-			.into(resterauntImage);
-		} else {
-			Picasso.with(context).load(Constants.PIZZA_KINGDOM)
-			.into(resterauntImage);
-		}
 		
-		resterauntName.setText(mFoodItems.get(position).getResteraunt());
-		resterauntSpecial.setText(mFoodItems.get(position).getDescription());
+		FoodItem food = mFoodItems.get(position);
+
+		Picasso.with(context).load(food.getPhoto())
+		.into(resterauntImage);
+
+		resterauntName.setText(food.getResteraunt());
+		resterauntSpecial.setText(food.getDescription());
 
 		return convertView;
 	}

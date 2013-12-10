@@ -4,6 +4,7 @@ import javax.inject.Inject;
 
 import org.ektorp.CouchDbInstance;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -16,11 +17,11 @@ import android.widget.ListView;
 
 import com.couchbase.cblite.router.CBLURLStreamHandlerFactory;
 import com.mobileappdevelopersclub.fapp.adapters.MenuListAdapter;
-import com.mobileappdevelopersclub.fapp.transactions.MotivationalMessageService;
 import com.mobileappdevelopersclub.fapp.ui.EventsListFragment;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
 import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
+import com.mobileappdevelopersclub.fapp.ui.TransportationListFragment;
 import com.mobileappdevelopersclub.fapp.ui.TweetsListFragment;
 
 public class MainActivity extends FappActivity {
@@ -31,8 +32,8 @@ public class MainActivity extends FappActivity {
 	int[] icon;
 	private ActionBarDrawerToggle mDrawerToggle;
 
-	public static String[] mDrawerOptions = {"Schedule" , "Food" , "Events" 
-		, "Libraries" , "Transportation", "Testudo's Nose", "Extras"};
+	public static String[] mDrawerOptions = {"My Finals Schedule" , "Food Specials" ,
+		"Events", "Library Information" , "Testudo's Nose", "Bus Routes" , "Extras"};
 	public static ListView mDrawerList;
 	public static DrawerLayout mDrawerLayout;
 	static MenuListAdapter mMenuAdapter;
@@ -43,7 +44,8 @@ public class MainActivity extends FappActivity {
 	LibraryListFragment mLibraryListFragment;
 	TweetsListFragment mTweetsListFragment;
 	EventsListFragment mEventsListFragment;
-	
+	TransportationListFragment mTransportationListFrag;
+
 	@Inject CouchDbInstance dbInstance;
 
 
@@ -60,8 +62,8 @@ public class MainActivity extends FappActivity {
 		Constants.initConstants(this);
 
 		//set broadcast receiver
-//		MotivationalMessageService bR = new MotivationalMessageService();
-//		bR.setAlarm(this);
+		//		MotivationalMessageService bR = new MotivationalMessageService();
+		//		bR.setAlarm(this);
 
 		mTitle = mDrawerTitle = getResources().getString(R.string.app_name);
 		getActionBar().setTitle(mTitle);
@@ -150,7 +152,7 @@ public class MainActivity extends FappActivity {
 			mDrawerList.setItemChecked(position, false);
 			mDrawerLayout.closeDrawer(mDrawerList);
 		} else if (position == Constants.EVENTS_OPTION) { 
-		
+
 			mEventsListFragment = EventsListFragment.newInstance();
 			getFragmentManager().beginTransaction().replace(R.id.main_frame, mEventsListFragment).commit();
 			mDrawerList.setItemChecked(position, false);
@@ -168,7 +170,19 @@ public class MainActivity extends FappActivity {
 			getFragmentManager().beginTransaction().replace(R.id.main_frame, mTweetsListFragment).commit();
 			mDrawerList.setItemChecked(position, false);
 			mDrawerLayout.closeDrawer(mDrawerList);
-		} else {
+		} else if(position == Constants.TRANS_OPTION){
+			
+			mTransportationListFrag = TransportationListFragment.newInstance();
+			getFragmentManager().beginTransaction().replace(R.id.main_frame, mTransportationListFrag).commit();
+			mDrawerList.setItemChecked(position, false);
+			mDrawerLayout.closeDrawer(mDrawerList);
+			
+		} else if(position == Constants.EXTRAS_OPTION) { 
+			
+			Intent extrasIntent = new Intent(MainActivity.this, ExtrasActivity.class);
+			startActivity(extrasIntent);
+			
+		}else {
 			//do nothing
 			mDrawerList.setItemChecked(position, false);
 			mDrawerLayout.closeDrawer(mDrawerList);

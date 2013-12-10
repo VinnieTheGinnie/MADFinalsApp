@@ -24,4 +24,17 @@
     <string name="access_token">23317561-b5CrifbpuOF8M9ZjhYbeWAPpVkCxNZRTW5C6m3oZr</string>
     <string name="access_token_secret">itaVjDEmrYAueoVm3Yu5zx1XXZPiQaL71Q6aSKwfRRM</string>
     
+     <string name="designed_by">Designed and Developed by the University of Maryland\'s</string>
+    <string name="group_name">Mobile App Developers Club and SGA</string>
+    <string name="give_feedback">We appreciate your feedback!</string>
+    <string name="feedback_email">umdfinalsapp\@gmail.com</string>
+    <string name="group_name_abbrv">M.A.D.</string>
+    <string name="twitter_handle">\@MADterps</string>
+    <string name="facebook_title">UMCP Mobile App Developers</string>
+    <string name="email">mobileappdevelopersclub\@gmail.com</string>
+    <string name="web_url">mobileappdevelopersclub.com</string>
+    <string name="google_plus">UMD Mobile App Developers</string>
+    <string name="food_list_header"><i>*Click item to expand coupon, Coupons valid
+         only during Finals Week, 12/16/2013 through 12/21/2013</i></string>
+    
 </resources>

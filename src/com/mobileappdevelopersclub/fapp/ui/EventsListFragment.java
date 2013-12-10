@@ -43,7 +43,8 @@ import com.mobileappdevelopersclub.fapp.models.ScheduleItemRepository;
 public class EventsListFragment extends FappFragment {
 
 	private View mView;
-	private static Context context;
+	private static EventsListFragment context;
+	
 	private ListView mList;
 	private EventsListitemAdapter mAdapter;
 	
@@ -58,7 +59,7 @@ public class EventsListFragment extends FappFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		context = this.getActivity();
+		context = this;
 	}
 
 	@Override
@@ -79,7 +80,9 @@ public class EventsListFragment extends FappFragment {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int pos,
 					long arg3) {
-				showAddToSchedDialog(mAdapter.getItem(pos));
+				// TODO: Once the schedule layout works nicely with overlapping 
+					// items, add this feature back in 
+//				showAddToSchedDialog(mAdapter.getItem(pos));
 
 			}
 
@@ -91,7 +94,7 @@ public class EventsListFragment extends FappFragment {
 	}
 
 	private void showAddToSchedDialog(Event e) {
-		new AddToScheduleDialogFragment().show(getFragmentManager(), 
+		AddToScheduleDialogFragment.newInstance(e).show(getFragmentManager(), 
 				"Add To Schedule Dialog Showing");
 	}
 
@@ -170,9 +173,19 @@ public class EventsListFragment extends FappFragment {
 
 	}
 
-	@SuppressLint("ValidFragment")
-	public class AddToScheduleDialogFragment extends DialogFragment {
-
+	public static class AddToScheduleDialogFragment extends DialogFragment {
+		
+		
+		Event event;
+		
+		public static AddToScheduleDialogFragment newInstance(Event e) {
+			AddToScheduleDialogFragment frag = new AddToScheduleDialogFragment();
+			frag.event = e;
+			return frag;
+		}
+		
+		
+		
 		@Override
 		public Dialog onCreateDialog(Bundle savedInstanceState) {
 			AlertDialog.Builder builder =
@@ -195,6 +208,7 @@ public class EventsListFragment extends FappFragment {
 				@Override
 				public void onClick(DialogInterface dialog, int id) {
 					//TODO: save schedule item
+					context.new CouchDbCommitTask().execute(event);
 				}
 			})
 			.setNegativeButton(R.string.no,

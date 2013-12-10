@@ -4,11 +4,13 @@ public class FoodItem {
 	
 	private String resteraunt;
 	private String description;
+	private String photo;
 	
-	public FoodItem(String resteraunt, String description) {
+	public FoodItem(String resteraunt, String description, String photo) {
 		super();
 		this.resteraunt = resteraunt;
 		this.description = description;
+		this.photo = photo;
 	}
 	
 	public String getResteraunt() {
@@ -23,8 +25,13 @@ public class FoodItem {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
-	
-	
+
+	public String getPhoto() {
+		return photo;
+	}
+
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
 	
 }

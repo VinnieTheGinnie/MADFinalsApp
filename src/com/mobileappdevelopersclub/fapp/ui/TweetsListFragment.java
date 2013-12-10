@@ -28,7 +28,6 @@ public class TweetsListFragment extends FappFragment {
 	private TweetsListItemAdapter mAdapter;
 	private Twitter mTwitter;
 
-	
 	public static TweetsListFragment newInstance() {
 		TweetsListFragment fragment = new TweetsListFragment();
 		return fragment;
@@ -105,6 +104,7 @@ public class TweetsListFragment extends FappFragment {
 		protected ArrayList<twitter4j.Status> doInBackground(Object... params) {
 			final ArrayList<String> list = new ArrayList<String>();
 			list.add("#UMDfinals");
+			list.add("#umdfinalscountdown");
 			list.add("#UMDgoTerps");
 			return get_tweets(list);	
 		}
