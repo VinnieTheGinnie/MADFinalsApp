@@ -25,13 +25,19 @@ import android.content.Context;
 import android.util.Log;
 import com.couchbase.cblite.CBLServer;
 import com.couchbase.cblite.ektorp.CBLiteHttpClient;
+import com.mobileappdevelopersclub.fapp.ExtrasActivity;
 import com.mobileappdevelopersclub.fapp.FappApplication;
 import com.mobileappdevelopersclub.fapp.MainActivity;
 import com.mobileappdevelopersclub.fapp.transactions.MotivationalMessageService;
+import com.mobileappdevelopersclub.fapp.ui.DailyScheduleFragment;
 import com.mobileappdevelopersclub.fapp.ui.EventsListFragment;
+import com.mobileappdevelopersclub.fapp.ui.ExtrasFragment;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
+import com.mobileappdevelopersclub.fapp.ui.HealthResourcesFragment;
 import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
+import com.mobileappdevelopersclub.fapp.ui.TransportationListFragment;
+import com.mobileappdevelopersclub.fapp.ui.TransportationUrlFragment;
 import com.mobileappdevelopersclub.fapp.ui.TweetsListFragment;
 import com.mobileappdevelopersclub.fapp.util.ForApplication;
 
@@ -46,7 +52,10 @@ import dagger.Provides;
 		injects= { MainActivity.class, FappApplication.class, 
 					ScheduleFragment.class, FoodSpecialsFragment.class,
 					LibraryListFragment.class, TweetsListFragment.class, 
-					MotivationalMessageService.class, EventsListFragment.class } , 
+					MotivationalMessageService.class, EventsListFragment.class,
+					DailyScheduleFragment.class, ExtrasActivity.class , 
+					ExtrasFragment.class, TransportationListFragment.class, 
+					TransportationUrlFragment.class, HealthResourcesFragment.class} , 
 		library = true
 		)
 

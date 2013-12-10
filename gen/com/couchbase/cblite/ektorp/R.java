@@ -8,10 +8,10 @@ package com.couchbase.cblite.ektorp;
 
 public final class R {
 	public static final class drawable {
-		public static final int ic_launcher = 0x7f020006;
+		public static final int ic_launcher = 0x7f020019;
 	}
 	public static final class layout {
-		public static final int main = 0x7f03000d;
+		public static final int main = 0x7f030013;
 	}
 	public static final class string {
 		public static final int app_name = 0x7f040001;

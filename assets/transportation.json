@@ -1,0 +1,83 @@
+{ busRoutes : [
+	{
+		"title" : "108-Adelphi" ,
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/108_Adelphi.pdf"
+	},
+	{
+		"title" : "125-Circulator",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/125_Circ.pdf"
+	},
+	{
+		"title" : "104-College Park Metro",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/104_CPM.pdf"
+	},
+	{
+		"title" : "105-Courtyards Express" ,
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/105_CtyExp.pdf"
+	},
+	{
+		"title" : "128-Enclave",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/128_Enclave.pdf"
+	},
+	{
+		"title" : "131-Enclave Mazza Grandmarc",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/131_MazzaGrandMarc_TheEnclave.pdf"
+	},
+	{
+		"title" : "129-Franklin Park",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/129%20Franklin%20Park%20at%20Greenbelt%20Station.pdf"
+	},
+	{
+		"title" : "130-Greenbelt",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/130_GB.pdf"
+	},
+	{
+		"title" : "113-Hyattsville",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/113_HYATT.pdf"
+	},
+	{
+		"title" : "133-Mall at PG",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/133_MPGs.pdf"
+	},
+	{
+		"title" : "127-Mazza Grandmarc",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/127_MGM.pdf"
+	},
+	{
+		"title" : "109-River Road",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/109_RR.pdf"
+	},
+	{
+		"title" : "110-Seven Springs Apartments",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/110_SSApt.pdf"
+	},
+	{
+		"title" : "111-Silver Spring",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/111_SSM.pdf"
+	},
+	{
+		"title" : "132-The Varsity",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/132_The%20Varsity.pdf"
+	},
+	{
+		"title" : "117-Blue",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/117_Blue.pdf"
+	},
+	{
+		"title" : "118-Gold",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/118_Gold.pdf"
+	},
+	{
+		"title" : "122-Green",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/122_Green.pdf"
+	},
+	{
+		"title" : "115-Orange",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/115_Orange.pdf"
+	},
+	{
+		"title" : "116-Purple",
+		"pdfUrl": "http://www.transportation.umd.edu/images/Shuttle/Schedules%20pdfs/current/116_Purple.pdf"
+	}
+]
+}

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.mobileappdevelopersclub.fapp.FappFragment;
 import com.mobileappdevelopersclub.fapp.R;
@@ -24,11 +25,11 @@ public class TweetsListFragment extends FappFragment {
 	
 	private View mView;
 	private Context context;
+	private LayoutInflater mInflater;
 	private ListView mList;
 	private TweetsListItemAdapter mAdapter;
 	private Twitter mTwitter;
 
-	
 	public static TweetsListFragment newInstance() {
 		TweetsListFragment fragment = new TweetsListFragment();
 		return fragment;
@@ -38,6 +39,7 @@ public class TweetsListFragment extends FappFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		context = this.getActivity();
         mTwitter = getTwitter();
 	}
 
@@ -46,11 +48,13 @@ public class TweetsListFragment extends FappFragment {
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreateView(inflater, container, savedInstanceState);
-		
-		mView = inflater.inflate(R.layout.list_layout, null);
+		mInflater = inflater;
+		mView = mInflater.inflate(R.layout.list_layout, null);
 		
 		mAdapter = new TweetsListItemAdapter(getActivity(), 0, new ArrayList<Tweet>());
 		mList = (ListView) mView.findViewById(R.id.mList);
+		mList.addHeaderView(getHeaderView());
+		
 		mList.setAdapter(mAdapter);
 		
 		//createTestTweets();
@@ -59,6 +63,15 @@ public class TweetsListFragment extends FappFragment {
 		
 		
 		return mView;
+	}
+	
+	private View getHeaderView() {
+		TextView tv = (TextView) 
+				mInflater.inflate(R.layout.list_view_header, null);
+		
+		tv.setText(context.getResources().getString(R.string.twitter_header));
+		
+		return tv;
 	}
 	
 	/** Test for Tweets list view
@@ -105,6 +118,7 @@ public class TweetsListFragment extends FappFragment {
 		protected ArrayList<twitter4j.Status> doInBackground(Object... params) {
 			final ArrayList<String> list = new ArrayList<String>();
 			list.add("#UMDfinals");
+			list.add("#umdfinalscountdown");
 			list.add("#UMDgoTerps");
 			return get_tweets(list);	
 		}

@@ -19,7 +19,7 @@ public class ScheduleItem extends CouchDbDocument {
 	private String location;
 	private String instructor;
 	private String section;
-	private String desctiption;
+	private String description;
 	private String type;
 	private String startTime;
 	private String endTime;
@@ -49,7 +49,7 @@ public class ScheduleItem extends CouchDbDocument {
 		this.startTime = startTime;
 		this.endTime = endTime;
 		this.location = location;
-		this.desctiption = description;
+		this.description = description;
 		this.type = type;
 	}
 
@@ -113,12 +113,12 @@ public class ScheduleItem extends CouchDbDocument {
 
 
 	public String getDesctiption() {
-		return desctiption;
+		return description;
 	}
 
 
 	public void setDesctiption(String desctiption) {
-		this.desctiption = desctiption;
+		this.description = desctiption;
 	}
 
 	public String getType() {

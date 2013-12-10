@@ -2,5 +2,7 @@
 <resources>
     
     <color name="white">#FFFFFF</color>
-    
+    <color name="lightgray">#ffcfcfcf</color>
+    <color name="darkgray">#202020</color>
+    <color name="blue">#0000FF</color>
 </resources>

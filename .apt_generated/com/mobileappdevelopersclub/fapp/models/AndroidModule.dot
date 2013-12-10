@@ -1,5 +1,7 @@
 digraph G1 {
   concentrate = true;
+  DailyScheduleFragment -> CouchDbInstance;
+  EventsListFragment -> CouchDbInstance;
   MainActivity -> CouchDbInstance;
   ScheduleFragment -> CouchDbInstance;
 }
