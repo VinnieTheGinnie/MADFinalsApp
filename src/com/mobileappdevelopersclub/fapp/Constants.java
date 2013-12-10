@@ -37,7 +37,8 @@ public class Constants {
 	public static final int LIBRARY_OPTION = 3;
 	public static final int TWEETS_OPTION = 4;
 	public static final int TRANS_OPTION = 5;
-	public static final int EXTRAS_OPTION = 6;
+	public static final int HEALTH_OPTION = 6;
+	public static final int EXTRAS_OPTION = 7;
 	
 	//hardcoded image urls 
 	public static final String PIZZA_KINGDOM = "http://media-cdn.tripadvisor.com/media/photo-s/03/37/fc/fa/pizza-kingdom.jpg";

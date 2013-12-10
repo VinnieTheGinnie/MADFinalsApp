@@ -1,0 +1,63 @@
+{ healthResources: [
+  {
+    "title":"University Health Center",
+    "contact":"(301) 314-8180                                                                                                                                                                                           After Hours Nurse Line: (301) 314-9386      ",
+    "description":""
+  },
+  {
+    "title":"University of Maryland Mental Health Service @ the Health Center",
+    "contact":"(301)-314-8106",
+    "description":""
+  },
+  {
+    "title":"Help Center",
+    "contact":"(301) 314-HELP [4357]",
+    "description":"Help Center is a peer cousneling and crisis intervention hotline, where you can speak to a student peer counselor in confidence. We also provide walk-in counseling. The Help Center is in Room 3105 on the 3rd floor of the South Campus Dining Hall."
+  },
+  {
+    "title":"Campus Chaplains",
+    "contact":"(301) 314-9866",
+    "description":""
+  },
+  {
+    "title":"Counseling Center",
+    "contact":"301-314-7651",
+    "description":""
+  },
+  {
+    "title":"Disability Support Service:",
+    "contact":"",
+    "description":""
+  },
+  {
+    "title":"Learning Assistance Service",
+    "contact":"",
+    "description":""
+  },
+  {
+    "title":"Assessment & Stabilization Center (ASC)",
+    "contact":"(301) 618-3162 or (301) 322-2606",
+    "description":"For Mental Health Emergencies, if the Health Center is open and it is between 5 - 6pm Monday through Friday or between 9am - 12pm on Saturday, students can call the ASC."
+  },
+  {
+    "title":"National Suicide Prevention Lifeline ",
+    "contact":"1-800-273-TALK",
+    "description":""
+  },
+  {
+    "title":"Maryland Crisis Hotline",
+    "contact":"1-800-422-0009",
+    "description":""
+  },
+  {
+    "title":"UMD Police Emergency ",
+    "contact":"911 or (301) 405-3333",
+    "description":""
+  },
+  {
+    "title":"UMD Police Non-Emergency",
+    "contact":"(301) 405-3555",
+    "description":""
+  }
+]
+}

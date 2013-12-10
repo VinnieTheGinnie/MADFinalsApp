@@ -75,6 +75,28 @@
                 android:textColor="@color/darkgray"
                 android:textSize="24sp" />
         </LinearLayout>
+        
+         <LinearLayout
+            android:id="@+id/twitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="8dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/twitter" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sga_twitter_handle"
+                android:textColor="@color/darkgray"
+                android:textSize="24sp" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/facebook"

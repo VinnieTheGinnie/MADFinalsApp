@@ -33,6 +33,7 @@ import com.mobileappdevelopersclub.fapp.ui.DailyScheduleFragment;
 import com.mobileappdevelopersclub.fapp.ui.EventsListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ExtrasFragment;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
+import com.mobileappdevelopersclub.fapp.ui.HealthResourcesFragment;
 import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
 import com.mobileappdevelopersclub.fapp.ui.TransportationListFragment;
@@ -54,7 +55,7 @@ import dagger.Provides;
 					MotivationalMessageService.class, EventsListFragment.class,
 					DailyScheduleFragment.class, ExtrasActivity.class , 
 					ExtrasFragment.class, TransportationListFragment.class, 
-					TransportationUrlFragment.class} , 
+					TransportationUrlFragment.class, HealthResourcesFragment.class} , 
 		library = true
 		)
 

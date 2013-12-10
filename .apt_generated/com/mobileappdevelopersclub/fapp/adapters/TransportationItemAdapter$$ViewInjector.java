@@ -7,9 +7,9 @@ import butterknife.Views.Finder;
 public class TransportationItemAdapter$$ViewInjector {
   public static void inject(Finder finder, final com.mobileappdevelopersclub.fapp.adapters.TransportationItemAdapter target, Object source) {
     View view;
-    view = finder.findById(source, 2131296314);
+    view = finder.findById(source, 2131296317);
     if (view == null) {
-      throw new IllegalStateException("Required view with id '2131296314' for field 'busRouteTitle' was not found. If this field binding is optional add '@Optional'.");
+      throw new IllegalStateException("Required view with id '2131296317' for field 'busRouteTitle' was not found. If this field binding is optional add '@Optional'.");
     }
     target.busRouteTitle = (android.widget.TextView) view;
   }

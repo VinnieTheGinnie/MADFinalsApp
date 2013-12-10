@@ -90,20 +90,20 @@ public final class R {
     }
     public static final class id {
         public static final int Title=0x7f090007;
-        public static final int actionOverflow=0x7f090036;
-        public static final int action_add_class=0x7f09003f;
+        public static final int actionOverflow=0x7f090039;
+        public static final int action_add_class=0x7f090042;
         public static final int btnChangeDate=0x7f09000b;
         public static final int busRoutePDF=0x7f090009;
-        public static final int busRouteTitle=0x7f09003a;
+        public static final int busRouteTitle=0x7f09003d;
         public static final int className=0x7f090008;
         public static final int classSection=0x7f09001f;
-        public static final int classes=0x7f090030;
+        public static final int classes=0x7f090033;
         public static final int closes=0x7f090027;
         public static final int currentDate=0x7f09002b;
-        public static final int date=0x7f090032;
+        public static final int date=0x7f090035;
         public static final int dates=0x7f090024;
         public static final int dayAndTime=0x7f090015;
-        public static final int daysOfWeek=0x7f090038;
+        public static final int daysOfWeek=0x7f09003b;
         public static final int description=0x7f090017;
         public static final int dpResult=0x7f09000e;
         public static final int drawer_layout=0x7f09000f;
@@ -122,8 +122,8 @@ public final class R {
         public static final int hourOpen=0x7f090026;
         public static final int icon=0x7f090012;
         public static final int image=0x7f09000a;
-        public static final int infoLayout=0x7f090031;
-        public static final int instructor=0x7f090034;
+        public static final int infoLayout=0x7f090034;
+        public static final int instructor=0x7f090037;
         public static final int lblDate=0x7f09000c;
         public static final int left_drawer=0x7f090011;
         public static final int libraryHours=0x7f09002c;
@@ -136,21 +136,24 @@ public final class R {
         public static final int overflow=0x7f090018;
         public static final int pager=0x7f090006;
         public static final int popup_text=0x7f09002e;
+        public static final int resourceContact=0x7f090030;
+        public static final int resourceDescription=0x7f090031;
+        public static final int resourceTitle=0x7f09002f;
         public static final int resterauntImage=0x7f090020;
         public static final int resterauntName=0x7f090021;
         public static final int resterauntSpecial=0x7f090022;
-        public static final int schedule=0x7f090039;
-        public static final int scheduleLayout=0x7f090037;
-        public static final int section=0x7f090035;
+        public static final int schedule=0x7f09003c;
+        public static final int scheduleLayout=0x7f09003a;
+        public static final int section=0x7f090038;
         public static final int subtitle=0x7f090014;
-        public static final int time=0x7f090033;
-        public static final int timeSlots=0x7f09002f;
+        public static final int time=0x7f090036;
+        public static final int timeSlots=0x7f090032;
         public static final int title=0x7f090013;
         public static final int tvDate=0x7f09000d;
-        public static final int tweetHashtags=0x7f09003e;
-        public static final int tweetImage=0x7f09003b;
-        public static final int tweetText=0x7f09003d;
-        public static final int tweetUsername=0x7f09003c;
+        public static final int tweetHashtags=0x7f090041;
+        public static final int tweetImage=0x7f09003e;
+        public static final int tweetText=0x7f090040;
+        public static final int tweetUsername=0x7f09003f;
         public static final int twitter=0x7f090001;
         public static final int webpage=0x7f090005;
     }
@@ -176,11 +179,12 @@ public final class R {
         public static final int list_view_header=0x7f030012;
         public static final int main=0x7f030013;
         public static final int popup_list=0x7f030014;
-        public static final int schedule_layout=0x7f030015;
-        public static final int schedule_list_item=0x7f030016;
-        public static final int schedulefragment_main=0x7f030017;
-        public static final int transportation_list_item=0x7f030018;
-        public static final int tweets_list_item=0x7f030019;
+        public static final int resource_list_item=0x7f030015;
+        public static final int schedule_layout=0x7f030016;
+        public static final int schedule_list_item=0x7f030017;
+        public static final int schedulefragment_main=0x7f030018;
+        public static final int transportation_list_item=0x7f030019;
+        public static final int tweets_list_item=0x7f03001a;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -196,29 +200,33 @@ public final class R {
         public static final int cancel=0x7f04000d;
         public static final int class_name_hint=0x7f040007;
         public static final int class_section_hint=0x7f040008;
-        /** 	TWITTER APP/ACCOUNT INFO
+        /** 
+        	TWITTER APP/ACCOUNT INFO
 		 			CURRENT USER: 	zinglax 
 		 			APP NAME:		twads
-		 			This should be changed to finals app twitter account 
+		 			This should be changed to finals app twitter account
+    
          */
         public static final int consumer_key=0x7f04000e;
         public static final int consumer_secret=0x7f04000f;
         public static final int designed_by=0x7f040012;
         public static final int drawer_close=0x7f040005;
         public static final int drawer_open=0x7f040004;
-        public static final int email=0x7f040019;
-        public static final int facebook_title=0x7f040018;
+        public static final int email=0x7f04001a;
+        public static final int facebook_title=0x7f040019;
         public static final int feedback_email=0x7f040015;
-        public static final int food_list_header=0x7f04001c;
+        public static final int food_list_header=0x7f04001d;
         public static final int give_feedback=0x7f040014;
-        public static final int google_plus=0x7f04001b;
+        public static final int google_plus=0x7f04001c;
         public static final int group_name=0x7f040013;
         public static final int group_name_abbrv=0x7f040016;
         public static final int hello=0x7f040000;
         public static final int hello_world=0x7f040003;
         public static final int no=0x7f04000b;
+        public static final int sga_twitter_handle=0x7f040018;
         public static final int twitter_handle=0x7f040017;
-        public static final int web_url=0x7f04001a;
+        public static final int twitter_header=0x7f04001e;
+        public static final int web_url=0x7f04001b;
         public static final int yes=0x7f04000a;
     }
     public static final class style {
