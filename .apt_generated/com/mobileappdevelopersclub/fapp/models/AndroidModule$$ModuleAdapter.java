@@ -26,35 +26,8 @@ public final class AndroidModule$$ModuleAdapter extends ModuleAdapter<AndroidMod
    */
   @Override
   public void getBindings(Map<String, Binding<?>> map) {
-    map.put("@com.mobileappdevelopersclub.fapp.util.ForApplication()/android.content.Context", new ProvideContextProvidesAdapter(module));
     map.put("org.ektorp.CouchDbInstance", new ProvideCouchDbInstanceProvidesAdapter(module));
-  }
-
-  /**
-   * A {@code Binder<android.content.Context>} implementation which satisfies
-   * Dagger's infrastructure requirements including:
-   * 
-   * Being a {@code Provider<android.content.Context>} and handling creation and
-   * preparation of object instances.
-   */
-  public static final class ProvideContextProvidesAdapter extends Binding<android.content.Context>
-      implements Provider<android.content.Context> {
-    private final AndroidModule module;
-
-    public ProvideContextProvidesAdapter(AndroidModule module) {
-      super("@com.mobileappdevelopersclub.fapp.util.ForApplication()/android.content.Context", null, IS_SINGLETON, "com.mobileappdevelopersclub.fapp.models.AndroidModule.provideContext()");
-      this.module = module;
-      setLibrary(true);
-    }
-
-    /**
-     * Returns the fully provisioned instance satisfying the contract for
-     * {@code Provider<android.content.Context>}.
-     */
-    @Override
-    public android.content.Context get() {
-      return module.provideContext();
-    }
+    map.put("@com.mobileappdevelopersclub.fapp.util.ForApplication()/android.content.Context", new ProvideContextProvidesAdapter(module));
   }
 
   /**
@@ -81,6 +54,33 @@ public final class AndroidModule$$ModuleAdapter extends ModuleAdapter<AndroidMod
     @Override
     public org.ektorp.CouchDbInstance get() {
       return module.provideCouchDbInstance();
+    }
+  }
+
+  /**
+   * A {@code Binder<android.content.Context>} implementation which satisfies
+   * Dagger's infrastructure requirements including:
+   * 
+   * Being a {@code Provider<android.content.Context>} and handling creation and
+   * preparation of object instances.
+   */
+  public static final class ProvideContextProvidesAdapter extends Binding<android.content.Context>
+      implements Provider<android.content.Context> {
+    private final AndroidModule module;
+
+    public ProvideContextProvidesAdapter(AndroidModule module) {
+      super("@com.mobileappdevelopersclub.fapp.util.ForApplication()/android.content.Context", null, IS_SINGLETON, "com.mobileappdevelopersclub.fapp.models.AndroidModule.provideContext()");
+      this.module = module;
+      setLibrary(true);
+    }
+
+    /**
+     * Returns the fully provisioned instance satisfying the contract for
+     * {@code Provider<android.content.Context>}.
+     */
+    @Override
+    public android.content.Context get() {
+      return module.provideContext();
     }
   }
 }
