@@ -17,22 +17,22 @@ public class TweetsListItemAdapter$$ViewInjector {
       throw new IllegalStateException("Required view with id '2131296320' for field 'tweetText' was not found. If this field binding is optional add '@Optional'.");
     }
     target.tweetText = (android.widget.TextView) view;
-    view = finder.findById(source, 2131296318);
-    if (view == null) {
-      throw new IllegalStateException("Required view with id '2131296318' for field 'tweetImage' was not found. If this field binding is optional add '@Optional'.");
-    }
-    target.tweetImage = (android.widget.ImageView) view;
     view = finder.findById(source, 2131296321);
     if (view == null) {
       throw new IllegalStateException("Required view with id '2131296321' for field 'tweetHashtags' was not found. If this field binding is optional add '@Optional'.");
     }
     target.tweetHashtags = (android.widget.TextView) view;
+    view = finder.findById(source, 2131296318);
+    if (view == null) {
+      throw new IllegalStateException("Required view with id '2131296318' for field 'tweetImage' was not found. If this field binding is optional add '@Optional'.");
+    }
+    target.tweetImage = (android.widget.ImageView) view;
   }
 
   public static void reset(com.mobileappdevelopersclub.fapp.adapters.TweetsListItemAdapter target) {
     target.tweetUsername = null;
     target.tweetText = null;
-    target.tweetImage = null;
     target.tweetHashtags = null;
+    target.tweetImage = null;
   }
 }

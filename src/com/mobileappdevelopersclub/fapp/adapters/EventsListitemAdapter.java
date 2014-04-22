@@ -2,7 +2,6 @@ package com.mobileappdevelopersclub.fapp.adapters;
 
 import java.text.ParseException;
 import java.util.List;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
