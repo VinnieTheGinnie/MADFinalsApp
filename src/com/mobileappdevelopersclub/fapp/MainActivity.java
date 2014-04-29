@@ -38,7 +38,7 @@ public class MainActivity extends FappActivity {
 		"Events", "Library Information" , "Testudo's Nose", "Bus Routes" , "Mental Health Resources" , "Extras" , "GPA Calculator"};
 	public static ListView mDrawerList;
 	public static DrawerLayout mDrawerLayout;
-	static MenuListAdapter mMenuAdapter; 
+	static MenuListAdapter mMenuAdapter;  
 
 	//Option Fragments to Navigate to through drawer 
 	ScheduleFragment mScheduleFragment;
