@@ -35,7 +35,7 @@ public class GpaCalculatorFragment extends FappFragment {
 	@InjectView(R.id.editText8) EditText ed8;
 	@InjectView(R.id.editText9) EditText ed9;
 	@InjectView(R.id.editText10) EditText ed10;
-	@InjectView(R.id.editText11) EditText ed11;
+	@InjectView(R.id.editText11) EditText ed11; 
 	@InjectView(R.id.editText12) EditText ed12;
 	@InjectView(R.id.editText13) EditText ed13;
 	@InjectView(R.id.editText14) EditText ed14;
