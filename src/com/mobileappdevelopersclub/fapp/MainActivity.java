@@ -19,6 +19,7 @@ import com.couchbase.cblite.router.CBLURLStreamHandlerFactory;
 import com.mobileappdevelopersclub.fapp.adapters.MenuListAdapter;
 import com.mobileappdevelopersclub.fapp.ui.EventsListFragment;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
+import com.mobileappdevelopersclub.fapp.ui.GpaCalculatorFragment;
 import com.mobileappdevelopersclub.fapp.ui.HealthResourcesFragment;
 import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
@@ -34,7 +35,7 @@ public class MainActivity extends FappActivity {
 	private ActionBarDrawerToggle mDrawerToggle;
 
 	public static String[] mDrawerOptions = {"My Finals Schedule" , "Food Specials" ,
-		"Events", "Library Information" , "Testudo's Nose", "Bus Routes" , "Mental Health Resources" , "Extras"};
+		"Events", "Library Information" , "Testudo's Nose", "Bus Routes" , "Mental Health Resources" , "Extras" , "GPA Calculator"};
 	public static ListView mDrawerList;
 	public static DrawerLayout mDrawerLayout;
 	static MenuListAdapter mMenuAdapter;
@@ -47,6 +48,7 @@ public class MainActivity extends FappActivity {
 	EventsListFragment mEventsListFragment;
 	TransportationListFragment mTransportationListFrag;
 	HealthResourcesFragment mHealthResourceFragment;
+	GpaCalculatorFragment mGpaCalculatorFragment;
 
 	@Inject CouchDbInstance dbInstance;
 
@@ -183,6 +185,13 @@ public class MainActivity extends FappActivity {
 			
 			mHealthResourceFragment = HealthResourcesFragment.newInstance();
 			getFragmentManager().beginTransaction().replace(R.id.main_frame, mHealthResourceFragment).commit();
+			mDrawerList.setItemChecked(position, false);
+			mDrawerLayout.closeDrawer(mDrawerList);
+
+		} else if (position == Constants.GPA_OPTION ) {
+			
+			mGpaCalculatorFragment = GpaCalculatorFragment.newInstance();
+			getFragmentManager().beginTransaction().replace(R.id.main_frame, mGpaCalculatorFragment).commit();
 			mDrawerList.setItemChecked(position, false);
 			mDrawerLayout.closeDrawer(mDrawerList);
 
