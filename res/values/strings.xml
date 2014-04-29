@@ -41,5 +41,10 @@
     <string name="twitter_header">Share your finals experience with the rest of campus:
          #umdfinalscountdown Follow \@UMDSGA on Twitter to check out the Finals Week
           question of the day!</string>
+    <string name="gpa_string">GPA:</string>
+    <string name="initial_gpa_value">0.00</string>
+    <string name="calculate_string">Calculate!</string>
+    <string name="calculator_credit_hint">Credits ( i.e. &quot;3&quot;)</string>
+    <string name="calculator_grade_hint">Grade ( i.e. &quot;A+&quot;)</string>
 
 </resources>
