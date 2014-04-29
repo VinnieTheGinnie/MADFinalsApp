@@ -17,12 +17,16 @@ package com.mobileappdevelopersclub.fapp.models;
 
 
 import java.io.IOException;
+
 import javax.inject.Singleton;
+
 import org.ektorp.CouchDbInstance;
 import org.ektorp.http.HttpClient;
 import org.ektorp.impl.StdCouchDbInstance;
+
 import android.content.Context;
 import android.util.Log;
+
 import com.couchbase.cblite.CBLServer;
 import com.couchbase.cblite.ektorp.CBLiteHttpClient;
 import com.mobileappdevelopersclub.fapp.ExtrasActivity;
@@ -33,6 +37,7 @@ import com.mobileappdevelopersclub.fapp.ui.DailyScheduleFragment;
 import com.mobileappdevelopersclub.fapp.ui.EventsListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ExtrasFragment;
 import com.mobileappdevelopersclub.fapp.ui.FoodSpecialsFragment;
+import com.mobileappdevelopersclub.fapp.ui.GpaCalculatorFragment;
 import com.mobileappdevelopersclub.fapp.ui.HealthResourcesFragment;
 import com.mobileappdevelopersclub.fapp.ui.LibraryListFragment;
 import com.mobileappdevelopersclub.fapp.ui.ScheduleFragment;
@@ -55,7 +60,8 @@ import dagger.Provides;
 					MotivationalMessageService.class, EventsListFragment.class,
 					DailyScheduleFragment.class, ExtrasActivity.class , 
 					ExtrasFragment.class, TransportationListFragment.class, 
-					TransportationUrlFragment.class, HealthResourcesFragment.class} , 
+					TransportationUrlFragment.class, HealthResourcesFragment.class,
+					GpaCalculatorFragment.class} , 
 		library = true
 		)
 
