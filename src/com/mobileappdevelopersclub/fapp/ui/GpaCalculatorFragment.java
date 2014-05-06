@@ -142,6 +142,8 @@ public class GpaCalculatorFragment extends FappFragment {
 			 return Constants.D_MINUS_INT;
 		 } if(string.equals(Constants.F)){
 			 return Constants.F_INT;
+		 } if(string.equals("")){
+			 return 0;
 		 } else{
 			 //If one of the above strings arent entered an error toast pops up
 			 Toast.makeText(getActivity(),"To see correct GPA, "
